@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Continental Breakfast</title>
+    <style>
+        /* Basic styling for the dropdown box */
+        .dropdown {
+            margin-bottom: 10px; /* Add space between dropdowns */
+        }
+
+        .dropdown-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 15px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .dropdown-header:hover {
+            background-color: #e0e0e0;
+        }
+
+        .dropdown-header::after {
+            content: '\25BC'; /* Downward arrow icon */
+            font-size: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .dropdown-header.active::after {
+            transform: rotate(180deg); /* Rotate arrow upward */
+        }
+
+        .dropdown-content {
+            display: none; /* Hidden by default */
+            padding: 10px 15px;
+            background-color: #fafafa;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: -1px; /* Overlap with the header border */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="north-america.html">North America</a>
+        <a href="south-america.html">South America</a>
+        <a href="oceania.html">Oceania</a>
+        <a href="asia.html">Asia</a>
+        <a href="africa.html">Africa</a>
+        <a href="europe.html">Europe</a>
+        <a href="antarctica.html">Antarctica</a>
+    </nav>
+    <div class="content">
+        <h1>Continental Breakfast</h1>
+        <p>Welcome to the Continental Breakfast homepage. Explore the continents through the navigation menu above.</p>
+    </div>
+    <div id="culture">
+        <h2>Africa's Culture</h2>
+        <p>
+            The continent of Africa is home to a diverse array of populations that have been influence by external factors.
+            Each country is known for having its own tribes, languages, and cultural differences. Even the smallest countrys such as Uganday contain more than 30
+            established tribes.
+        </p>
+        <p>
+            Select a dropdown below to learn more about Africa's Culture!
+        </p>
+        <div class="dropdown">
+            <div class="dropdown-header"><h4>Famous African Tribes</h4></div>
+                <div class="dropdown-content">
+                    <p>
+                        The Zulu people, South Africa's largest ethnic group, primarily reside in the province of KwaZulu-Natal, with a population of around 10-11 million. 
+                        Under apartheid in the 19th and 20th centuries, the Zulu faced significant discrimination and were considered third-class citizens. 
+                        Today, they enjoy equal rights and continue to contribute to South Africa's diverse cultural heritage.
+                    </p>
+                    <p>
+                        The Maasai people inhabit the Rift Valley region of Kenya and Tanzania, maintaining a lifestyle centered on their large herds of cattle, sheep, and goats. 
+                        Cattle play a vital role in Maasai society, symbolizing wealth and power, with an individual's status often determined by the size of their herd. 
+                        Their nomadic practices and deep cultural pride make the Maasai a fascinating and resilient tribe.
+                    </p>
+                    <p>
+                        In the Omo River Region of southwestern Ethiopia, over fifty unique tribes preserve their traditional customs and beliefs. 
+                        The area's isolation has helped protect these cultural practices, offering visitors a rare glimpse into the rich diversity of African tribal life. 
+                        This region is a vibrant hub for those interested in exploring traditional African cultures.
+                    </p>
+                    <img src="africaCultureImages/africaCulture2.jpg" alt="Image of Culture in Africa" style="width:300px; height:auto;">
+                </div>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown-header"><h4>African Food</h4></div>
+                <div class="dropdown-content">
+                    <p>In many Eastern, Western, and Southern African villages, farming is the primary way of life, 
+                        with people relying almost entirely on the food they grow themselves. Outdoor markets are common, 
+                        where traditional African foods are sold, reflecting the close connection between communities and their agricultural practices.
+                    </p>
+                    <img src="africaCultureImages/africaFood.jpg" alt="Image of Food in Africa" style="width:300px; height:auto;">
+                    <p>
+                        Different regions of Africa have distinct culinary traditions. In North African countries like Morocco and Algeria, 
+                        couscous is a staple dish, often served with meat and vegetables. In Western Africa, common crops such as cassava, maize, millet, and 
+                        plantains form the basis of many meals, showcasing the diversity of African cuisine.
+                    </p>
+                    <p>
+                        Cultural traditions heavily influence cooking practices, with women and girls often responsible for preparing meals. Colonization has 
+                        also left its mark on African food and drink; for example, in Kenya, tea is a popular beverage introduced during British rule. These influences blend 
+                        with traditional practices to create a unique and varied food culture across the continent.
+                    </p>
+                </div>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown-header"><h4>African Languages</h4></div>
+                <div class="dropdown-content">
+                    <p>
+                        Africa is home to thousands of indigenous languages and dialects, with each country, even the smallest, having its own linguistic diversity. 
+                        Due to Africa's colonial history, many people also speak Creole or Pidgin versions of European languages like English, Portuguese, or French. 
+                        In Northern Africa, Arabic is widely spoken, while Swahili serves as the dominant language in East Africa, highlighting the continent’s rich and varied linguistic heritage.
+                    </p>
+                    <img src="africaCultureImages/africaCulture.jpg" alt="Image of Culture in Africa" style="width:300px; height:auto;">
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.dropdown-header').forEach(header => {
+            header.addEventListener('click', () => {
+                header.classList.toggle('active');
+
+                const content = header.nextElementSibling;
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>
