@@ -1,6 +1,8 @@
 let form = document.getElementById("quizSA");
 
 function validateForm(event) {
+    event.preventDefault();
+    console.log("HERE");
     let q11 = form.q11.checked;
     let q12 = form.q12.checked;
     let q13 = form.q13.checked;
@@ -44,7 +46,30 @@ function validateForm(event) {
     if (!q11 && !q12 && !q13 && !q14) {
         alert("Please select an option for Question 1.");
         return;
-    } else if (q12) {
+    }
+    if (!q21 && !q22 && !q23 && !q24) {
+        alert("Please select an option for Question 2.");
+        return;
+    }
+    if (!q31 && !q32 && !q33 && !q34) {
+        alert("Please select an option for Question 3.");
+        return;
+    } 
+    if (!q41 && !q42 && !q43 && !q44) {
+        alert("Please select an option for Question 4.");
+        return;
+    } 
+    if (!q51 && !q52 && !q53 && !q54) {
+        alert("Please select an option for Question 5.");
+        return;
+    } 
+    if (!q61 && !q62 && !q63 && !q64) {
+        alert("Please select an option for Question 6.");
+        return;
+    } 
+
+
+    if (q12) {
         correct++;
         q1Notif.textContent = "Correct!";
         q1Notif.className = "correct";
@@ -52,11 +77,8 @@ function validateForm(event) {
         q1Notif.textContent = "Incorrect!";
         q1Notif.className = "incorrect";
     }
-
-    if (!q21 && !q22 && !q23 && !q24) {
-        alert("Please select an option for Question 2.");
-        return;
-    } else if (q23) {
+     
+    if (q23) {
         correct++;
         q2Notif.textContent = "Correct!";
         q2Notif.className = "correct";
@@ -64,11 +86,8 @@ function validateForm(event) {
         q2Notif.textContent = "Incorrect!";
         q2Notif.className = "incorrect";
     }
-
-    if (!q31 && !q32 && !q33 && !q34) {
-        alert("Please select an option for Question 3.");
-        return;
-    } else if (q31) {
+    
+    if (q31) {
         correct++;
         q3Notif.textContent = "Correct!";
         q3Notif.className = "correct";
@@ -76,11 +95,8 @@ function validateForm(event) {
         q3Notif.textContent = "Incorrect!";
         q3Notif.className = "incorrect";
     }
-
-    if (!q41 && !q42 && !q43 && !q44) {
-        alert("Please select an option for Question 4.");
-        return;
-    } else if (q44) {
+    
+    if (q44) {
         correct++;
         q4Notif.textContent = "Correct!";
         q4Notif.className = "correct";
@@ -88,11 +104,8 @@ function validateForm(event) {
         q4Notif.textContent = "Incorrect!";
         q4Notif.className = "incorrect";
     }
-
-    if (!q51 && !q52 && !q53 && !q54) {
-        alert("Please select an option for Question 5.");
-        return;
-    } else if (q53) {
+    
+    if (q53) {
         correct++;
         q5Notif.textContent = "Correct!";
         q5Notif.className = "correct";
@@ -100,11 +113,8 @@ function validateForm(event) {
         q5Notif.textContent = "Incorrect!";
         q5Notif.className = "incorrect";
     }
-
-    if (!q61 && !q62 && !q63 && !q64) {
-        alert("Please select an option for Question 6.");
-        return;
-    } else if (q62) {
+    
+    if (q62) {
         correct++;
         q6Notif.textContent = "Correct!";
         q6Notif.className = "correct";
@@ -113,11 +123,19 @@ function validateForm(event) {
         q6Notif.className = "incorrect";
     }
 
-    total = correct/6;
+    total = ((correct/6) * 100).toFixed(2);
 
     let scoreTag = document.getElementById("saScore");
     scoreTag.textContent = `You scored a ${total}%`;
 
+    let radios = document.querySelectorAll("input[type='radio']");
+    for (let radio of radios) {
+        radio.checked = false;
+    }
 }
 
-form.addEventListener("submit", validateForm);
+if (form) {
+    form.addEventListener("submit", validateForm);
+} else {
+    console.error("Form not found!");
+}

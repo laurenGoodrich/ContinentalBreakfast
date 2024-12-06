@@ -1,0 +1,107 @@
+
+
+.quizContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quizContainer > form {
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: rgb(165, 194, 232);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 4px;
+    width: 80%;
+}
+
+.quiz {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-content: center;
+    gap: 10px;
+    margin: 10px 20px 0px 20px;
+}
+
+.question {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 20px 20px 20px;
+}
+
+.questionTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.score {
+    font-size: 24px;
+    color: #555;
+}
+
+.correct {
+    color: green;
+    font-weight: bold;
+    background-color: #e6f7e6; /* Light green background */
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.incorrect {
+    color: red;
+    font-weight: bold;
+    background-color: #f8d7da; /* Light red background */
+    padding: 5px;
+    border-radius: 4px;
+}
+
+
+.question input[type="radio"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #555;
+    border-radius: 50%;
+    background: #fff;
+    margin-right: 10px;
+}
+
+.question input[type="radio"]:hover {
+    background-color: #818181;
+}
+
+.question input[type="radio"]:checked {
+    background-color: #467aff;
+}
+
+.question label {
+    font-size: 16px;
+    color: #555;
+}
+
+.quizSubmitContainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 10px;
+}
+
+.quizSubmitContainer > button {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.quizSubmitContainer > button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
