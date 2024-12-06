@@ -1,0 +1,16 @@
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+.clickable-image {
+    width: 300px;
+    cursor: pointer;
+  }
+  
+.fun-fact {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+  }
+  
