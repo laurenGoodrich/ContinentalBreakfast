@@ -2,7 +2,7 @@ let form = document.getElementById("quizOC");
 
 function validateForm(event) {
     event.preventDefault();
-    console.log("HERE");
+
     let q11 = form.q11.checked;
     let q12 = form.q12.checked;
     let q13 = form.q13.checked;
@@ -69,7 +69,7 @@ function validateForm(event) {
     } 
 
 
-    if (q12) {
+    if (q11) {
         correct++;
         q1Notif.textContent = "Correct!";
         q1Notif.className = "correct";
@@ -78,7 +78,7 @@ function validateForm(event) {
         q1Notif.className = "incorrect";
     }
      
-    if (q23) {
+    if (q22) {
         correct++;
         q2Notif.textContent = "Correct!";
         q2Notif.className = "correct";
@@ -87,7 +87,7 @@ function validateForm(event) {
         q2Notif.className = "incorrect";
     }
     
-    if (q31) {
+    if (q32) {
         correct++;
         q3Notif.textContent = "Correct!";
         q3Notif.className = "correct";
@@ -96,7 +96,7 @@ function validateForm(event) {
         q3Notif.className = "incorrect";
     }
     
-    if (q44) {
+    if (q41) {
         correct++;
         q4Notif.textContent = "Correct!";
         q4Notif.className = "correct";
@@ -105,7 +105,7 @@ function validateForm(event) {
         q4Notif.className = "incorrect";
     }
     
-    if (q53) {
+    if (q54) {
         correct++;
         q5Notif.textContent = "Correct!";
         q5Notif.className = "correct";
@@ -114,7 +114,7 @@ function validateForm(event) {
         q5Notif.className = "incorrect";
     }
     
-    if (q62) {
+    if (q63) {
         correct++;
         q6Notif.textContent = "Correct!";
         q6Notif.className = "correct";

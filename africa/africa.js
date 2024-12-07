@@ -2,7 +2,7 @@ let form = document.getElementById("quizAF");
 
 function validateForm(event) {
     event.preventDefault();
-    console.log("HERE");
+    
     let q11 = form.q11.checked;
     let q12 = form.q12.checked;
     let q13 = form.q13.checked;

@@ -2,7 +2,7 @@ let form = document.getElementById("quizSA");
 
 function validateForm(event) {
     event.preventDefault();
-    console.log("HERE");
+    
     let q11 = form.q11.checked;
     let q12 = form.q12.checked;
     let q13 = form.q13.checked;
@@ -96,7 +96,7 @@ function validateForm(event) {
         q3Notif.className = "incorrect";
     }
     
-    if (q44) {
+    if (q43) {
         correct++;
         q4Notif.textContent = "Correct!";
         q4Notif.className = "correct";
@@ -105,7 +105,7 @@ function validateForm(event) {
         q4Notif.className = "incorrect";
     }
     
-    if (q53) {
+    if (q51) {
         correct++;
         q5Notif.textContent = "Correct!";
         q5Notif.className = "correct";

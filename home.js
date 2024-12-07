@@ -1,14 +1,12 @@
-document.addEventListener('DOMContentLoaded',
-    function () {
-        const navItems = document
-            .querySelectorAll('.nav-item');
+const navLinks = document.querySelectorAll('nav ul li a');
+const currentPage = window.location.pathname;
 
-        navItems.forEach(item => {
-            item.addEventListener('click',
-                function () {
-                    navItems.forEach(navItem => navItem
-                        .classList.remove('active'));
-                    this.classList.add('active');
-                });
-        });
-    });
+
+navLinks.forEach(link => {
+    const linkPath = new URL(link.href).pathname;
+    if (linkPath.endsWith(currentPage)) {
+        link.classList.add('active');
+    } else {
+        link.classList.remove('active');
+    }
+});
