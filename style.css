@@ -229,3 +229,42 @@ nav ul li a.active {
 .quizSubmitContainer > button:hover {
     background-color: #45a049; /* Darker green on hover */
 }
+/*Styling for a dropdown feature*/
+.dropdown {
+    margin-bottom: 10px; 
+}
+
+.dropdown-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dropdown-header:hover {
+    background-color: #e0e0e0;
+}
+
+.dropdown-header::after {
+    content: '\25BC'; 
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-header.active::after {
+    transform: rotate(180deg); 
+}
+
+.dropdown-content {
+    display: none; 
+    padding: 10px 15px;
+    background-color: #fafafa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: -1px; 
+}
