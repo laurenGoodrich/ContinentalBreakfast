@@ -114,7 +114,7 @@ nav ul li a:hover {
     color: #4df266;
 }
 
-.nav-item.active {
+nav ul li a.active {
     color: #f2e74d;
 }
 
@@ -152,6 +152,11 @@ nav ul li a:hover {
     padding: 10px 20px 20px 20px;
 }
 
+.question > div {
+    display: flex;
+}
+
+
 .questionTitle {
     font-size: 18px;
     font-weight: bold;
@@ -167,7 +172,7 @@ nav ul li a:hover {
 .correct {
     color: green;
     font-weight: bold;
-    background-color: #e6f7e6; /* Light green background */
+    background-color: #e6f7e6;
     padding: 5px;
     border-radius: 4px;
 }
@@ -175,7 +180,7 @@ nav ul li a:hover {
 .incorrect {
     color: red;
     font-weight: bold;
-    background-color: #f8d7da; /* Light red background */
+    background-color: #f8d7da;
     padding: 5px;
     border-radius: 4px;
 }
@@ -189,6 +194,7 @@ nav ul li a:hover {
     border-radius: 50%;
     background: #fff;
     margin-right: 10px;
+    box-sizing: border-box;
 }
 
 .question input[type="radio"]:hover {
