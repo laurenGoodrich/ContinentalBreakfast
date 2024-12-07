@@ -7,72 +7,12 @@
     <meta name="author" content="Austin Medina, Lauren Goodrich, Enka Hysaj, Maddie Carlson">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asia</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <script src="asiaQuiz.js" defer></script>
-    <style>
-        .map-container {
-            position: relative;
-            display: block;
-            text-align: center; /* This will center the image horizontally */
-            margin-top: 20px; /* Optional: Adds some space between the paragraph and the map */
-        }
-
-        .map-image {
-            max-width: 700px;  /* Adjust size as needed */
-            width: 100%;       /* Ensures the image is responsive up to the max-width */
-            max-height: 600px;
-            height: 100%;      /* Maintains aspect ratio */
-            margin: 0 auto;    /* Centers the image horizontally */
-            display: block;    /* Ensures it behaves like a block element for centering */
-        }
-
-        .region-button {
-            position: absolute;
-            background-color: rgba(255, 255, 255, 0.8);
-            border: 1px solid #ccc;
-            padding: 5px 10px;
-            cursor: pointer;
-            border-radius: 5px;
-            transform: translate(-50%, -50%);
-        }
-
-        .region-button:hover {
-            background-color: rgba(255, 165, 0, 0.8);
-        }
-
-        .details {
-            display: none; /* Initially hidden */
-            position: fixed; /* Fix to viewport, not the document flow */
-            top: 50%; /* Move to the middle of the viewport */
-            left: 50%; /* Move to the middle of the viewport */
-            transform: translate(-50%, -50%); /* Adjust for the element's size */
-            z-index: 1000; /* Ensure it's above other elements */
-            border: 1px solid #ccc;
-            padding: 15px;
-            background-color: #f9f9f9;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
-            max-width: 90%; /* Make it responsive */
-            width: 400px; /* Set a default width */
-            border-radius: 8px; /* Optional: Rounded corners */
-        }
-
-        .details img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .close-button {
-            background: #f00;
-            color: #fff;
-            padding: 5px;
-            border: none;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
     <nav>
-        <a href="home.html">Home</a>
+        <a href="../home.html">Home</a>
         <a href="/northAmerica/northAmerica.html">North America</a>
         <a href="/southAmerica/southAmerica.html">South America</a>
         <a href="/oceania/oceania.html">Oceania</a>
@@ -88,7 +28,6 @@
             <p>Asia, the largest continent, covers 30% of Earth’s land area and is home to 60% of the world’s population. It is characterized by a diverse landscape divided into five major physical regions: mountain systems, plateaus, plains and deserts, freshwater environments, and saltwater environments. Each region shapes the continent's unique geography, culture, and ecosystems, making Asia a key player in global history and ecological significance.</p>
             <div class="map-container">
                 <img src="asiaGeographyImages/asiaMap2.png" alt="Antarctica Map" class="map-image">
-                <!-- Buttons -->
                 <div class="region-button" style="top: 40%; left: 30%;" onclick="showDetails('border')">
                     Asia's Border
                 </div>
@@ -108,7 +47,6 @@
                     Saltwater Regions
                  </div>
             </div>
-            <!-- Details Sections -->
             <div id="border" class="details">
                 <h2>Asia's Borders</h2>
                 <p>Asia occupies the eastern part of the Eurasian supercontinent, bordered by the Arctic, Pacific, and Indian Oceans. Its western border with Europe follows an irregular line marked by the Ural and Caucasus Mountains, the Caspian Sea, and the Black Sea. While oceans provide clear boundaries, the division between Asia and Europe is often debated due to overlapping geographical and political factors. Historically, the names “Asia” and “Europe” may derive from Mesopotamian words for “sunrise” and “sunset.” The concept of Eurasia as a unified supercontinent has gained importance in geopolitics, particularly in fostering connections between Russia, China, and countries like Kazakhstan.</p>
