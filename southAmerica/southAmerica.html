@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<body>
-    
-    <div id="culture">
+    <section id="culture">
         <h2>South America's Culture</h2>
         <p>South America contains a rich and diverse culture set that stems from
             pre-Colombian civilizations and indigenous tribes. Combined with influnce from 
@@ -83,17 +79,15 @@
                     <img src="southAmericaCultureImages/chileculture.jpg" alt="Image of Culture in Brazil" style="width:300px; height:auto;">
                 </div>
         </div>
-    <div>
-    <script>
-        document.querySelectorAll('.dropdown-header').forEach(header => {
-            header.addEventListener('click', () => {
-                header.classList.toggle('active');
-    
-                const content = header.nextElementSibling;
-                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        <script>
+            document.querySelectorAll('.dropdown-header').forEach(header => {
+                header.addEventListener('click', () => {
+                    header.classList.toggle('active');
+        
+                    const content = header.nextElementSibling;
+                    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                });
             });
-        });
-    </script>
+        </script>
+    </section>
 
-</body>
-</html>

@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<body>
-    
-    <div id="culture">
+    <section id="culture">
         <h2>North American Culture</h2>
         <p>
             European culture is a rich blend of historical legacies, diverse languages, and artistic traditions, 
@@ -93,17 +89,16 @@
                     </p>
                 </div>
         </div>
-    </div>
 
-    <script>
-        document.querySelectorAll('.dropdown-header').forEach(header => {
-            header.addEventListener('click', () => {
-                header.classList.toggle('active');
-
-                const content = header.nextElementSibling;
-                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        <script>
+            document.querySelectorAll('.dropdown-header').forEach(header => {
+                header.addEventListener('click', () => {
+                    header.classList.toggle('active');
+    
+                    const content = header.nextElementSibling;
+                    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                });
             });
-        });
-    </script>
-</body>
-</html>
+        </script>
+    </section>
+

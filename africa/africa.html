@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<body>
-    
-    <div id="culture">
+    <section id="culture">
         <h2>Africa's Culture</h2>
         <p>
             The continent of Africa is home to a diverse array of populations that have been influence by external factors.
@@ -67,16 +63,15 @@
                     <img src="africaCultureImages/africaCulture.jpg" alt="Image of Culture in Africa" style="width:300px; height:auto;">
             </div>
         </div>
-    </div>
-    <script>
-        document.querySelectorAll('.dropdown-header').forEach(header => {
-            header.addEventListener('click', () => {
-                header.classList.toggle('active');
 
-                const content = header.nextElementSibling;
-                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        <script>
+            document.querySelectorAll('.dropdown-header').forEach(header => {
+                header.addEventListener('click', () => {
+                    header.classList.toggle('active');
+    
+                    const content = header.nextElementSibling;
+                    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                });
             });
-        });
-    </script>
-</body>
-</html>
+        </script>
+    </section>

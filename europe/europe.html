@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<body>
-    
-    <div id="culture">
+    <section id="culture">
         <h2>European Culture</h2>
         <p>
             Europe's cultural heritage is a rich and diverse blend of natural, built, and archaeological sites, as well as museums, 
@@ -95,16 +91,14 @@
             </div>
         </div>
 
-    </div>
-    <script>
-        document.querySelectorAll('.dropdown-header').forEach(header => {
-            header.addEventListener('click', () => {
-                header.classList.toggle('active');
-
-                const content = header.nextElementSibling;
-                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        <script>
+            document.querySelectorAll('.dropdown-header').forEach(header => {
+                header.addEventListener('click', () => {
+                    header.classList.toggle('active');
+    
+                    const content = header.nextElementSibling;
+                    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                });
             });
-        });
-    </script>
-</body>
-</html>
+        </script>
+    </section>

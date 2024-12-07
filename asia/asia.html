@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<body>
     
-    <div id="culture">
+    <section id="culture">
         <h2>Asia's Culture</h2>
         <p>
             Asian cultures are diverse and encompass a wide range of traditions across East Asia, South Asia, and Southeast Asia. 
@@ -97,16 +94,15 @@
                     </p>
                 </div>
         </div>
-    </div>
-    <script>
-        document.querySelectorAll('.dropdown-header').forEach(header => {
-            header.addEventListener('click', () => {
-                header.classList.toggle('active');
-    
-                const content = header.nextElementSibling;
-                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+
+        <script>
+            document.querySelectorAll('.dropdown-header').forEach(header => {
+                header.addEventListener('click', () => {
+                    header.classList.toggle('active');
+        
+                    const content = header.nextElementSibling;
+                    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                });
             });
-        });
-    </script>
-</body>
-</html>
+        </script>
+    </section>

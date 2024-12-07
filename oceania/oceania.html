@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<body>
-    
-    <div id="culture">
+    <section id="culture">
         <h2>Oceania's Culture</h2>
         <p>
             The Pacific Islands, home to the world’s most diverse range of indigenous cultures, preserve many ancestral traditions due to 
@@ -81,16 +77,16 @@
                     <img src="oceaniaCultureImages/oceaniaPoliticsCulture.jpg" alt="Image of Political Culture in Oceania" style="width:300px; height:auto;">
                 </div>
         </div>
-    </div>
-    <script>
-        document.querySelectorAll('.dropdown-header').forEach(header => {
-            header.addEventListener('click', () => {
-                header.classList.toggle('active');
 
-                const content = header.nextElementSibling;
-                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        <script>
+            document.querySelectorAll('.dropdown-header').forEach(header => {
+                header.addEventListener('click', () => {
+                    header.classList.toggle('active');
+    
+                    const content = header.nextElementSibling;
+                    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                });
             });
-        });
-    </script>
-</body>
-</html>
+        </script>
+    </section>
+
