@@ -7,72 +7,12 @@
     <meta name="author" content="Austin Medina, Lauren Goodrich, Enka Hysaj, Maddie Carlson">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Europe</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <script src="europeQuiz.js" defer></script>
-    <style>
-        .map-container {
-            position: relative;
-            display: block;
-            text-align: center; /* This will center the image horizontally */
-            margin-top: 20px; /* Optional: Adds some space between the paragraph and the map */
-        }
-
-        .map-image {
-            max-width: 700px;  /* Adjust size as needed */
-            width: 100%;       /* Ensures the image is responsive up to the max-width */
-            max-height: 600px;
-            height: 100%;      /* Maintains aspect ratio */
-            margin: 0 auto;    /* Centers the image horizontally */
-            display: block;    /* Ensures it behaves like a block element for centering */
-        }
-
-        .region-button {
-            position: absolute;
-            background-color: rgba(255, 255, 255, 0.8);
-            border: 1px solid #ccc;
-            padding: 5px 10px;
-            cursor: pointer;
-            border-radius: 5px;
-            transform: translate(-50%, -50%);
-        }
-
-        .region-button:hover {
-            background-color: rgba(255, 165, 0, 0.8);
-        }
-
-        .details {
-            display: none; /* Initially hidden */
-            position: fixed; /* Fix to viewport, not the document flow */
-            top: 50%; /* Move to the middle of the viewport */
-            left: 50%; /* Move to the middle of the viewport */
-            transform: translate(-50%, -50%); /* Adjust for the element's size */
-            z-index: 1000; /* Ensure it's above other elements */
-            border: 1px solid #ccc;
-            padding: 15px;
-            background-color: #f9f9f9;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
-            max-width: 90%; /* Make it responsive */
-            width: 400px; /* Set a default width */
-            border-radius: 8px; /* Optional: Rounded corners */
-        }
-
-        .details img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .close-button {
-            background: #f00;
-            color: #fff;
-            padding: 5px;
-            border: none;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
     <nav>
-        <a href="home.html">Home</a>
+        <a href="../home.html">Home</a>
         <a href="/northAmerica/northAmerica.html">North America</a>
         <a href="/southAmerica/southAmerica.html">South America</a>
         <a href="/oceania/oceania.html">Oceania</a>
@@ -87,24 +27,19 @@
             <h2>Geography</h2>
             <p>Europe, the second-smallest continent, extends from Iceland in the west to the Ural Mountains in Russia in the east and from Norway’s Svalbard archipelago in the north to Greece and Malta in the south. Often described as a "peninsula of peninsulas," Europe is bordered by the Arctic Ocean to the north, the Atlantic Ocean to the west, and the Mediterranean, Black, and Caspian Seas to the south. The continent can be divided into four major physical regions: the Western Uplands, North European Plain, Central Uplands, and Alpine Mountains.</p>
             <img src="europeGeographyImages/europeMap.png" alt="Asia Map" class="map-image">
-            <!-- Buttons -->
             <div class="region-button" style="top: 50%; left: 50%;" onclick="showDetails('uplands')">
                 Western Uplands
             </div>
-            <!-- Buttons -->
             <div class="region-button" style="top: 70%; left: 65%;" onclick="showDetails('northPlains')">
                 North European Plain
             </div>
-            <!-- Buttons -->
             <div class="region-button" style="top: 80%; left: 54%;" onclick="showDetails('centralUplands')">
                 Central Uplands
             </div>
-            <!-- Buttons -->
             <div class="region-button" style="top: 85%; left: 45%;" onclick="showDetails('alpine')">
                 Alpine Mountains
             </div>
         </div>
-        <!-- Details Sections -->
         <div id="uplands" class="details">
             <h2>Western Uplands</h2>
             <p>The Western Uplands, also called the Northern Highlands, stretch across Scandinavia, Iceland, Scotland, Ireland, the Brittany region of France, Spain, and Portugal. These uplands are characterized by ancient, hard rock shaped by glaciation. The retreat of glaciers has left features such as marshlands, lakes, and dramatic fjords—long, narrow sea inlets surrounded by high cliffs. Fjords are particularly prominent in Iceland and Scandinavia.</p>

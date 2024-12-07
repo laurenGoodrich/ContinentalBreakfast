@@ -7,76 +7,12 @@
     <meta name="author" content="Austin Medina, Lauren Goodrich, Enka Hysaj, Maddie Carlson">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>South America</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <script src="southAmericaQuiz.js" defer></script>
-    <style>
-        .map-container {
-            position: relative;
-            display: block;
-            text-align: center; /* This will center the image horizontally */
-            margin-top: 20px; /* Optional: Adds some space between the paragraph and the map */
-        }
-
-        .map-image {
-            max-width: 700px;  /* Adjust size as needed */
-            width: 100%;       /* Ensures the image is responsive up to the max-width */
-            max-height: 600px;
-            height: 100%;      /* Maintains aspect ratio */
-            margin: 0 auto;    /* Centers the image horizontally */
-            display: block;    /* Ensures it behaves like a block element for centering */
-        }
-
-        .region-button {
-            position: absolute;
-            background-color: rgba(255, 255, 255, 0.8);
-            border: 1px solid #ccc;
-            padding: 5px 10px;
-            cursor: pointer;
-            border-radius: 5px;
-            transform: translate(-50%, -50%);
-        }
-
-        .region-button:hover {
-            background-color: rgba(255, 165, 0, 0.8);
-        }
-
-        .details {
-            display: none; /* Initially hidden */
-            position: fixed; /* Fix to viewport, not the document flow */
-            top: 50%; /* Move to the middle of the viewport */
-            left: 50%; /* Move to the middle of the viewport */
-            transform: translate(-50%, -50%); /* Adjust for the element's size */
-            z-index: 1000; /* Ensure it's above other elements */
-            border: 1px solid #ccc;
-            padding: 15px;
-            background-color: #f9f9f9;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
-            max-width: 90%; /* Make it responsive */
-            width: 400px; /* Set a default width */
-            border-radius: 8px; /* Optional: Rounded corners */
-            max-width: 90%; /* Make it responsive */
-            width: 400px; /* Set a default width */
-            max-height: 80%; /* Limit the height to 80% of the viewport */
-            overflow-y: auto; /* Enable scrolling for overflow content */
-        }
-
-        .details img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .close-button {
-            background: #f00;
-            color: #fff;
-            padding: 5px;
-            border: none;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
     <nav>
-        <a href="home.html">Home</a>
+        <a href="../home.html">Home</a>
         <a href="/northAmerica/northAmerica.html">North America</a>
         <a href="/southAmerica/southAmerica.html">South America</a>
         <a href="/oceania/oceania.html">Oceania</a>
@@ -92,7 +28,6 @@
             <p>South America, the fourth-largest continent, stretches from the Gulf of Darién in the northwest to Tierra del Fuego in the south. Its geography is divided into three main regions: mountains and highlands, river basins, and coastal plains. These diverse regions support a range of biomes, from alpine tundras and rainforests to dry deserts and fertile grasslands, contributing to the continent's unparalleled biodiversity.</p>
             <div class="map-container">
                 <img src="southAmericaGeographyImages/southAmericaMap.png" alt="Antarctica Map" class="map-image">
-                <!-- Buttons -->
                 <div class="region-button" style="top: 25%; left: 45%;" onclick="showDetails('mountains')">
                     Andes Mountains and Highlands
                 </div>
@@ -103,7 +38,6 @@
                     River Basins
                 </div>
             </div>
-            <!-- Details Sections -->
             <div id="mountains" class="details">
                 <h2>Andes Mountains and Highlands</h2>
                 <p>The Andes, the world’s longest mountain range, span 8,850 kilometers (5,500 miles) along the continent's western edge. Peaks like Aconcagua, the tallest outside Asia at 6,962 meters (22,841 feet), tower over alpine biomes. Highlands like the altiplano in Peru and Bolivia and the Patagonian plateaus in Argentina and Chile add to the diverse landscapes. Unique plants like the Queen of the Andes and hardy alpine vegetation thrive in these environments. Beyond the Andes, the Brazilian and Guiana Highlands feature forested plateaus that support vibrant ecosystems.</p>
