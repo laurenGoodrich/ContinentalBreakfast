@@ -8,19 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asia</title>
     <link rel="stylesheet" href="../style.css">
-    <script src="asiaQuiz.js" defer></script>
 </head>
 <body>
     <nav>
-        <a href="../home.html">Home</a>
-        <a href="/northAmerica/northAmerica.html">North America</a>
-        <a href="/southAmerica/southAmerica.html">South America</a>
-        <a href="/oceania/oceania.html">Oceania</a>
-        <a href="/asia/asia.html">Asia</a>
-        <a href="/africa/africa.html">Africa</a>
-        <a href="/europe/europe.html">Europe</a>
-        <a href="/antarctica/antarctica.html">Antarctica</a>
+        <ul>
+            <li><a href="../home.html">Home</a></li>
+            <li><a href="../northAmerica/northAmerica.html">North America</a></li>
+            <li><a href="../southAmerica/southAmerica.html">South America</a></li>
+            <li><a href="../oceania/oceania.html">Oceania</a></li>
+            <li><a href="../asia/asia.html">Asia</a></li>
+            <li><a href="../africa/africa.html">Africa</a></li>
+            <li><a href="../europe/europe.html">Europe</a></li>
+            <li><a href="../antarctica/antarctica.html">Antarctica</a></li>
+        </ul>
     </nav>
+    
     <div class="content">
         <h1>Asia</h1>
         <section class="geography">
@@ -135,6 +137,147 @@
                     heritage endures for future generations.</p>
 
         </section>
+        <div class="quizContainer">
+            <p id="asScore"></p>
+            <form id="quizAS">
+                <div class="quiz">
+                    <div class="question" id="question 1">
+                        <p class="questionTitle">Question 1: What is the largest country in Asia by land area?</p>
+                        <p class="score" id="q1Score"></p>                        
+                        <div>
+                            <div><input type="radio" name="q1" value="china" id="q11"></div>
+                            <div><label for="q11">China</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q1" value="india" id="q12"></div>
+                            <div><label for="q12">India</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q1" value="russia" id="q13"></div>
+                            <div><label for="q13">Russia</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q1" value="kazakhstan" id="q14"></div>
+                            <div><label for="q14">Kazakhstan</label></div>
+                        </div>
+                    </div>
+        
+                    <div class="question" id="question 2">
+                        <p class="questionTitle">Question 2: Which mountain range separates the Indian subcontinent from the rest of Asia?</p>
+                        <p class="score" id="q2Score"></p>
+                        <div>
+                            <div><input type="radio" name="q2" value="himalayas" id="q21"></div>
+                            <div><label for="q21">Himalayas</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q2" value="ural" id="q22"></div>
+                            <div><label for="q22">Ural Mountains</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q2" value="tian_shan" id="q23"></div>
+                            <div><label for="q23">Tien Shan</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q2" value="alps" id="q24"></div>
+                            <div><label for="q24">Alps</label></div>
+                        </div>
+                    </div>
+        
+                    <div class="question" id="question 3">
+                        <p class="questionTitle">Question 3: Which of the following countries is known for its famous cherry blossoms?</p>
+                        <p class="score" id="q3Score"></p>
+                        <div>
+                            <div><input type="radio" name="q3" value="china" id="q31"></div>
+                            <div><label for="q31">China</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q3" value="japan" id="q32"></div>
+                            <div><label for="q32">Japan</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q3" value="south_korea" id="q33"></div>
+                            <div><label for="q33">South Korea</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q3" value="india" id="q34"></div>
+                            <div><label for="q34">India</label></div>
+                        </div>
+                    </div>
+        
+                    <div class="question" id="question 4">
+                        <p class="questionTitle">Question 4: Which country in Asia is famous for its temples and mosques in the Deccan Plateau region?</p>
+                        <p class="score" id="q4Score"></p>
+                        <div>
+                            <div><input type="radio" name="q4" value="pakistan" id="q41"></div>
+                            <div><label for="q41">Pakistan</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q4" value="bangladesh" id="q42"></div>
+                            <div><label for="q42">Bangladesh</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q4" value="iran" id="q43"></div>
+                            <div><label for="q43">Iran</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q4" value="india" id="q44"></div>
+                            <div><label for="q44">India</label></div>
+                        </div>
+                    </div>
+        
+                    <div class="question" id="question 5">
+                        <p class="questionTitle">Question 5: Which freshwater lake in Asia is the deepest and holds 20% of the world's unfrozen freshwater?</p>
+                        <p class="score" id="q5Score"></p>
+                        
+                        <div>
+                            <div><input type="radio" name="q5" value="tonle_sap" id="q51"></div>
+                            <div><label for="q51">Tonle Sap</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q5" value="caspian_sea" id="q52"></div>
+                            <div><label for="q52">Caspian Sea</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q5" value="baikal" id="q53"></div>
+                            <div><label for="q53">Lake Baikal</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q5" value="lake_chad" id="q54"></div>
+                            <div><label for="q54">Lake Chad</label></div>
+                        </div>
+                    </div>
+        
+                    <div class="question" id="question 6">
+                        <p class="questionTitle">Question 6: Which Asian ecosystem is home to diverse species like the snow leopard and yaks?</p>
+                        <p class="score" id="q6Score"></p>
+
+                        <div>
+                            <div><input type="radio" name="q6" value="himalayas" id="q61"></div>
+                            <div><label for="q61">Himalayas</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q6" value="tundra" id="q62"></div>
+                            <div><label for="q62">Siberian Tundra</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q6" value="rainforest" id="q63"></div>
+                            <div><label for="q63">Southeast Asia Rainforests</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q6" value="steppe" id="q64"></div>
+                            <div><label for="q64">Central Asian Steppes</label></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quizSubmitContainer">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        
     </div>
+
+    <script src="asia.js"></script>
+    <script src="../home.js"></script>
 </body>
 </html>

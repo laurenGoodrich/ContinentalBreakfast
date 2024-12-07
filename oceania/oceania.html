@@ -8,19 +8,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oceania</title>
     <link rel="stylesheet" href="../style.css">
-    <script src="oceania.js" defer></script>
 </head>
 <body>
     <nav>
-        <a href="../home.html">Home</a>
-        <a href="/northAmerica/northAmerica.html">North America</a>
-        <a href="/southAmerica/southAmerica.html">South America</a>
-        <a href="/oceania/oceania.html">Oceania</a>
-        <a href="/asia/asia.html">Asia</a>
-        <a href="/africa/africa.html">Africa</a>
-        <a href="/europe/europe.html">Europe</a>
-        <a href="/antarctica/antarctica.html">Antarctica</a>
-    </nav>
+        <ul>
+            <li><a href="../home.html">Home</a></li>
+            <li><a href="../northAmerica/northAmerica.html">North America</a></li>
+            <li><a href="../southAmerica/southAmerica.html">South America</a></li>
+            <li><a href="../oceania/oceania.html">Oceania</a></li>
+            <li><a href="../asia/asia.html">Asia</a></li>
+            <li><a href="../africa/africa.html">Africa</a></li>
+            <li><a href="../europe/europe.html">Europe</a></li>
+            <li><a href="../antarctica/antarctica.html">Antarctica</a></li>
+        </ul>
+    </nav>    
     <div class="content">
         <h1>Oceania</h1>
         <section class="geography">
@@ -114,6 +115,145 @@
                     Australia's unique ecological treasures are preserved for future generations.</p>
 
         </section>
+        <div class="quizContainer">
+            <p id="ocScore"></p>
+            <form id="quizOC">
+                <div class="quiz">
+                    <div class="question" id="question 1">
+                        <p class="questionTitle">Question 1: Which country is the largest in Oceania by land area?</p>
+                        <p class="score" id="q1Score"></p>
+                        <div>
+                            <div><input type="radio" name="q1" value="australia" id="q11"></div>
+                            <div><label for="q11">Australia</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q1" value="papua_new_guinea" id="q12"></div>
+                            <div><label for="q12">Papua New Guinea</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q1" value="new_zealand" id="q13"></div>
+                            <div><label for="q13">New Zealand</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q1" value="fiji" id="q14"></div>
+                            <div><label for="q14">Fiji</label></div>
+                        </div>
+                    </div>
+        
+                    <div class="question" id="question 2">
+                        <p class="questionTitle">Question 2: What is the capital of New Zealand?</p>
+                        <p class="score" id="q2Score"></p>
+                        <div>
+                            <div><input type="radio" name="q2" value="auckland" id="q21"></div>
+                            <div><label for="q21">Auckland</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q2" value="wellington" id="q22"></div>
+                            <div><label for="q22">Wellington</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q2" value="christchurch" id="q23"></div>
+                            <div><label for="q23">Christchurch</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q2" value="hamilton" id="q24"></div>
+                            <div><label for="q24">Hamilton</label></div>
+                        </div>
+                    </div>
+        
+                    <div class="question" id="question 3">
+                        <p class="questionTitle">Question 3: Which of these is a famous Australian landmark?</p>
+                        <p class="score" id="q3Score"></p>
+                        <div>
+                            <div><input type="radio" name="q3" value="eiffel_tower" id="q31"></div>
+                            <div><label for="q31">Eiffel Tower</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q3" value="opera_house" id="q32"></div>
+                            <div><label for="q32">Sydney Opera House</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q3" value="statue_of_liberty" id="q33"></div>
+                            <div><label for="q33">Statue of Liberty</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q3" value="great_wall" id="q34"></div>
+                            <div><label for="q34">Great Wall of China</label></div>
+                        </div>
+                    </div>
+        
+                    <div class="question" id="question 4">
+                        <p class="questionTitle">Question 4: Which country in Oceania is known for its active volcanoes and coral reefs?</p>
+                        <p class="score" id="q4Score"></p>
+                        <div>
+                            <div><input type="radio" name="q4" value="vanuatu" id="q41"></div>
+                            <div><label for="q41">Vanuatu</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q4" value="fiji" id="q42"></div>
+                            <div><label for="q42">Fiji</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q4" value="tonga" id="q43"></div>
+                            <div><label for="q43">Tonga</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q4" value="new_caledonia" id="q44"></div>
+                            <div><label for="q44">New Caledonia</label></div>
+                        </div>
+                    </div>
+        
+                    <div class="question" id="question 5">
+                        <p class="questionTitle">Question 5: Which country is located on the island of Borneo, shared with Malaysia and Brunei?</p>
+                        <p class="score" id="q5Score"></p>
+                        <div>
+                            <div><input type="radio" name="q5" value="papua_new_guinea" id="q51"></div>
+                            <div><label for="q51">Papua New Guinea</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q5" value="brunei" id="q52"></div>
+                            <div><label for="q52">Brunei</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q5" value="philippines" id="q53"></div>
+                            <div><label for="q53">Philippines</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q5" value="indonesia" id="q54"></div>
+                            <div><label for="q54">Indonesia</label></div>
+                        </div>
+                    </div>
+        
+                    <div class="question" id="question 6">
+                        <p class="questionTitle">Question 6: Which ocean surrounds the majority of Oceania's islands?</p>
+                        <p class="score" id="q6Score"></p>
+                        <div>
+                            <div><input type="radio" name="q6" value="atlanticOcean" id="q61"></div>
+                            <div><label for="q61">Atlantic Ocean</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q6" value="indianOcean" id="q62"></div>
+                            <div><label for="q62">Indian Ocean</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q6" value="pacificOcean" id="q63"></div>
+                            <div><label for="q63">Pacific Ocean</label></div>
+                        </div>
+                        <div>
+                            <div><input type="radio" name="q6" value="arcticOcean" id="q64"></div>
+                            <div><label for="q64">Arctic Ocean</label></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quizSubmitContainer">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        
     </div>
+
+    <script src="oceania.js"></script>
+    <script src="../home.js"></script>
 </body>
 </html>

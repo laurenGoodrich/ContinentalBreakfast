@@ -4,7 +4,7 @@ document.querySelectorAll('.clickable-image').forEach(image => {
       funFact.style.display = funFact.style.display === 'none' ? 'block' : 'none';
     });
   });
-let form = document.getElementById("quizNA");
+let form = document.getElementById("quizAS");
 
 function validateForm(event) {
     event.preventDefault();
@@ -75,7 +75,7 @@ function validateForm(event) {
     } 
 
 
-    if (q12) {
+    if (q13) {
         correct++;
         q1Notif.textContent = "Correct!";
         q1Notif.className = "correct";
@@ -93,7 +93,7 @@ function validateForm(event) {
         q2Notif.className = "incorrect";
     }
     
-    if (q34) {
+    if (q32) {
         correct++;
         q3Notif.textContent = "Correct!";
         q3Notif.className = "correct";
@@ -131,7 +131,7 @@ function validateForm(event) {
 
     total = ((correct/6) * 100).toFixed(2);
 
-    let scoreTag = document.getElementById("naScore");
+    let scoreTag = document.getElementById("asScore");
     scoreTag.textContent = `You scored a ${total}%`;
 
     let radios = document.querySelectorAll("input[type='radio']");
