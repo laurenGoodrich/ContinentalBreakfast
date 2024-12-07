@@ -58,6 +58,9 @@
     max-width: 90%; 
     width: 400px; 
     border-radius: 8px; 
+    max-height: 80%; 
+    overflow-y: auto; 
+    border-radius: 8px; 
 }
 
 .details img {
