@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 document.querySelectorAll('.clickable-image').forEach(image => {
     image.addEventListener('click', () => {
       const funFact = image.nextElementSibling;
       funFact.style.display = funFact.style.display === 'none' ? 'block' : 'none';
     });
   });
-=======
 let form = document.getElementById("quizSA");
 
 function validateForm(event) {
@@ -142,13 +140,10 @@ function validateForm(event) {
     }
 }
 
-<<<<<<< HEAD
+
 form.addEventListener("submit", validateForm);
->>>>>>> cf537a6 (Created quiz and js)
-=======
 if (form) {
     form.addEventListener("submit", validateForm);
 } else {
     console.error("Form not found!");
 }
->>>>>>> f60566a (Created quiz template for every continent)

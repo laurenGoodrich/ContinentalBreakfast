@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 document.querySelectorAll('.clickable-image').forEach(image => {
     image.addEventListener('click', () => {
       const funFact = image.nextElementSibling;
@@ -6,7 +5,6 @@ document.querySelectorAll('.clickable-image').forEach(image => {
     });
   });
   
-=======
 let form = document.getElementById("quizAF");
 
 function validateForm(event) {
@@ -148,4 +146,3 @@ if (form) {
 } else {
     console.error("Form not found!");
 }
->>>>>>> f60566a (Created quiz template for every continent)
