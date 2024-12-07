@@ -4,26 +4,155 @@
     <meta charset="UTF-8">
     <meta name="description" content="Antarctica Information">
     <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="Austin Medina, Lauren Goodrich, Enka Hysaj, Maddie Carlson">>
+    <meta name="author" content="Austin Medina, Lauren Goodrich, Enka Hysaj, Maddie Carlson">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Africa</title>
     <style>
-        
+        .map-container {
+            position: relative;
+            display: block;
+            text-align: center; /* This will center the image horizontally */
+            margin-top: 20px; /* Optional: Adds some space between the paragraph and the map */
+        }
+
+        .map-image {
+            max-width: 700px;  /* Adjust size as needed */
+            width: 100%;       /* Ensures the image is responsive up to the max-width */
+            max-height: 600px;
+            height: 100%;      /* Maintains aspect ratio */
+            margin: 0 auto;    /* Centers the image horizontally */
+            display: block;    /* Ensures it behaves like a block element for centering */
+        }
+
+        .region-button {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transform: translate(-50%, -50%);
+        }
+
+        .region-button:hover {
+            background-color: rgba(255, 165, 0, 0.8);
+        }
+
+        .details {
+            display: none; /* Initially hidden */
+            position: fixed; /* Fix to viewport, not the document flow */
+            top: 50%; /* Move to the middle of the viewport */
+            left: 50%; /* Move to the middle of the viewport */
+            transform: translate(-50%, -50%); /* Adjust for the element's size */
+            z-index: 1000; /* Ensure it's above other elements */
+            border: 1px solid #ccc;
+            padding: 15px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
+            max-width: 90%; /* Make it responsive */
+            width: 400px; /* Set a default width */
+            border-radius: 8px; /* Optional: Rounded corners */
+        }
+
+        .details img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .close-button {
+            background: #f00;
+            color: #fff;
+            padding: 5px;
+            border: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="north-america.html">North America</a>
-        <a href="south-america.html">South America</a>
-        <a href="oceania.html">Oceania</a>
-        <a href="asia.html">Asia</a>
-        <a href="africa.html">Africa</a>
-        <a href="europe.html">Europe</a>
-        <a href="antarctica.html">Antarctica</a>
+        <a href="home.html">Home</a>
+        <a href="/northAmerica/northAmerica.html">North America</a>
+        <a href="/southAmerica/southAmerica.html">South America</a>
+        <a href="/oceania/oceania.html">Oceania</a>
+        <a href="/asia/asia.html">Asia</a>
+        <a href="/africa/africa.html">Africa</a>
+        <a href="/europe/europe.html">Europe</a>
+        <a href="/antarctica/antarctica.html">Antarctica</a>
     </nav>
     <div class="content">
         <h1>Antarctica</h1>
+        <div class="geography">
+            <h2>Geography</h2>
+            <p>Antarctica, the southernmost continent, is a land of extremes. Known as the coldest, windiest, and driest place on Earth, it is the largest desert and a hub for scientific exploration. Completely covered in ice and surrounded by frigid oceans, Antarctica is home to unique geological features, rich research opportunities, and an unparalleled glimpse into Earth’s climatic history, all while remaining uninhabitable for permanent human settlement.</p>
+            <div class="map-container">
+                <img src="antarcticaGeographyImages/antarcticaMap.png" alt="Antarctica Map" class="map-image">
+                <!-- Buttons -->
+                <div class="region-button" style="top: 20%; left: 70%;" onclick="showDetails('ocean')">
+                    Southern Ocean
+                </div>
+                <div class="region-button" style="top: 40%; left: 60%;" onclick="showDetails('volcano')">
+                    Volcanic Activity
+                </div>
+                <div class="region-button" style="top: 70%; left: 60%;" onclick="showDetails('mountainRange')">
+                    Mountain Range
+                </div>
+                <div class="region-button" style="top: 60%; left: 45%;" onclick="showDetails('greaterAntarctica')">
+                   Greater Antarctica
+                </div>
+                <div class="region-button" style="top: 70%; left: 31%;" onclick="showDetails('lesserAntarctica')">
+                    Lesser Antarctica
+                 </div>
+                 <div class="region-button" style="top: 30%; left: 50%;" onclick="showDetails('funFact1')">
+                    Fun Fact!
+                 </div>
+            </div>
+            <!-- Details Sections -->
+            <div id="ocean" class="details">
+                <h2>The Southern Ocean</h2>
+                <p>The Southern Ocean, which surrounds Antarctica, reaches depths of 4,000 to 5,000 meters (13,123 to 16,404 feet). These deep, frigid waters play a critical role in the region's ecosystem and global ocean circulation, influencing climate patterns far beyond the Antarctic region.</p>
+                <img src="antarcticaGeographyImages/oceanImage.jpg" alt="Southern Ocean Image">
+                <button class="close-button" onclick="hideDetails('ocean')">Close</button>
+            </div>
+            <div id="volcano" class="details">
+                <h2>Volcanic Activity</h2>
+                <p>Despite being a frozen landscape, Antarctica has volcanic activity. Mount Erebus, located on Ross Island, is the continent’s most active volcano and the southernmost active volcano on Earth. Most volcanic and tectonic activity occurs in Lesser Antarctica, which is part of the Pacific “Ring of Fire,” a region of significant geological movement known for earthquakes and volcanic eruptions.</p>
+                <img src="antarcticaGeographyImages/volcanoImage.png" alt="Volcanic Activity Image">
+                <button class="close-button" onclick="hideDetails('volcano')">Close</button>
+            </div>
+            <div id="mountainRange" class="details">
+                <h2>Transantarctic Mountains</h2>
+                <p>The Transantarctic Mountains divide the continent into eastern and western regions, with some peaks reaching elevations of over 4,500 meters (14,764 feet). The ice sheet itself averages 2,000 meters (6,562 feet) in elevation, rising to 4,000 meters (13,123 feet) near the center of the continent. These towering mountain ranges contribute to Antarctica's dramatic and rugged landscape.</p>
+                <img src="antarcticaGeographyImages/mountainImage.png" alt="Mountain Range Image">
+                <button class="close-button" onclick="hideDetails('mountainRange')">Close</button>
+            </div>
+            <div id="greaterAntarctica" class="details">
+                <h2>Greater Antarctica</h2>
+                <p>East Antarctica, or Greater Antarctica, is the larger and more massive region of the continent. It consists of ancient igneous and metamorphic rocks, making it geologically older than the western region. This vast landmass is roughly the size of Australia and dominates the eastern side of the continent. Covered in thick ice, it would appear as a single, large landmass if the ice were removed.</p>
+                <img src="antarcticaGeographyImages/greaterAntarcticaImage.jpg" alt="Greater Antarctica Image">
+                <button class="close-button" onclick="hideDetails('greaterAntarctica')">Close</button>
+            </div>
+            <div id="lesserAntarctica" class="details">
+                <h2>Lesser Antarctica</h2>
+                <p>West Antarctica, or Lesser Antarctica, is geologically younger and composed mainly of volcanic and sedimentary rocks. This region features numerous mountainous islands and expansive glaciers. If the ice were removed, it would form an archipelago of smaller islands surrounding the central landmass, highlighting its tectonic and volcanic activity as part of the Pacific “Ring of Fire.”</p>
+                <img src="antarcticaGeographyImages/lesserAntarcticaImage.jpg" alt="Lesser Antarctica Image">
+                <button class="close-button" onclick="hideDetails('lesserAntarctica')">Close</button>
+            </div>
+            <div id="funFact1" class="details">
+                <h2>Ice Sheet and Pack Ice</h2>
+                <p>The Antarctic Ice Sheet is the largest single mass of ice on Earth, with some areas reaching thicknesses of up to 3.2 kilometers (2 miles). During the winter months, the continents surface area effectively doubles as pack ice spreads into the surrounding oceans. Ice shelves, such as the Ross and Ronne Ice Shelves, are floating extensions of this massive ice sheet, growing as glaciers flow from the continent’s interior toward the coast.</p>
+                <img src="antarcticaGeographyImages/iceShelfImage.jpg" alt="Ice Shelf Image">
+                <button class="close-button" onclick="hideDetails('funFact1')">Close</button>
+            </div>
+            <script>
+                function showDetails(regionId) {
+                    document.getElementById(regionId).style.display = 'block';
+                }
+            
+                function hideDetails(regionId) {
+                    document.getElementById(regionId).style.display = 'none';
+                }
+            </script>
+        </div>
     </div>
 </body>
 </html>

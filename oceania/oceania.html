@@ -2,28 +2,146 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Africa Information">
+    <meta name="description" content="Oceana Information">
     <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="Austin Medina, Lauren Goodrich, Enka Hysaj, Maddie Carlson">>
+    <meta name="author" content="Austin Medina, Lauren Goodrich, Enka Hysaj, Maddie Carlson">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oceania</title>
     <style>
-        
+        .map-container {
+            position: relative;
+            display: block;
+            text-align: center; /* This will center the image horizontally */
+            margin-top: 20px; /* Optional: Adds some space between the paragraph and the map */
+        }
+
+        .map-image {
+            max-width: 700px;  /* Adjust size as needed */
+            width: 100%;       /* Ensures the image is responsive up to the max-width */
+            max-height: 600px;
+            height: 100%;      /* Maintains aspect ratio */
+            margin: 0 auto;    /* Centers the image horizontally */
+            display: block;    /* Ensures it behaves like a block element for centering */
+        }
+
+        .region-button {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transform: translate(-50%, -50%);
+        }
+
+        .region-button:hover {
+            background-color: rgba(255, 165, 0, 0.8);
+        }
+
+        .details {
+            display: none; /* Initially hidden */
+            position: fixed; /* Fix to viewport, not the document flow */
+            top: 50%; /* Move to the middle of the viewport */
+            left: 50%; /* Move to the middle of the viewport */
+            transform: translate(-50%, -50%); /* Adjust for the element's size */
+            z-index: 1000; /* Ensure it's above other elements */
+            border: 1px solid #ccc;
+            padding: 15px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
+            max-width: 90%; /* Make it responsive */
+            width: 400px; /* Set a default width */
+            border-radius: 8px; /* Optional: Rounded corners */
+            max-width: 90%; /* Make it responsive */
+            width: 400px; /* Set a default width */
+            max-height: 80%; /* Limit the height to 80% of the viewport */
+            overflow-y: auto; /* Enable scrolling for overflow content */
+        }
+
+        .details img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .close-button {
+            background: #f00;
+            color: #fff;
+            padding: 5px;
+            border: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="north-america.html">North America</a>
-        <a href="south-america.html">South America</a>
-        <a href="oceania.html">Oceania</a>
-        <a href="asia.html">Asia</a>
-        <a href="africa.html">Africa</a>
-        <a href="europe.html">Europe</a>
-        <a href="antarctica.html">Antarctica</a>
+        <a href="home.html">Home</a>
+        <a href="/northAmerica/northAmerica.html">North America</a>
+        <a href="/southAmerica/southAmerica.html">South America</a>
+        <a href="/oceania/oceania.html">Oceania</a>
+        <a href="/asia/asia.html">Asia</a>
+        <a href="/africa/africa.html">Africa</a>
+        <a href="/europe/europe.html">Europe</a>
+        <a href="/antarctica/antarctica.html">Antarctica</a>
     </nav>
     <div class="content">
         <h1>Oceania</h1>
+        <div class="geography">
+            <h2>Geography</h2>
+            <p>Oceania, a region of thousands of islands in the Central and South Pacific, is dominated by Australia, Zealandia (New Zealand), and Papua New Guinea. It also includes three island groups: Melanesia, Micronesia, and Polynesia. Oceania’s islands are grouped into three types—continental islands, high islands, and low islands—each with unique geography and formation.</p>
+            <div class="map-container">
+                <img src="oceaniaGeographyImages/oceanaMap.png" alt="Antarctica Map" class="map-image">
+                <!-- Buttons -->
+                <div class="region-button" style="top: 45%; left: 45%;" onclick="showDetails('continental')">
+                    Continental Islands
+                </div>
+                <div class="region-button" style="top: 20%; left: 49%;" onclick="showDetails('melanesia')">
+                    Melanesia
+                </div>
+                <div class="region-button" style="top: 35%; left: 65%;" onclick="showDetails('lowIslands')">
+                    Micronesia & Polynesia
+                </div>
+            </div>
+            <!-- Details Sections -->
+            <div id="continental" class="details">
+                <h2>Continental Islands (Australia, Zealandia, & Papa New Guinea)</h2>
+                <p>Continental islands like Australia, Zealandia, and Papua New Guinea were once part of larger continents. These regions share features like mountain ranges: the Great Dividing Range (Australia)</p>
+                <img src="oceaniaGeographyImages/greatDividingRange.png" alt="The Great Dividing Range Australia Image">
+                <p>Southern Alps (New Zealand)</p>
+                <img src="oceaniaGeographyImages/southernAlpsNZ.jpg" alt="Southern Alps New Zealand Image">
+                <p>and New Guinea Highlands</p>
+                <img src="oceaniaGeographyImages/newGuineaHighlands.png" alt="New Guinea Highlands Image">
+                <p>Each has unique landscapes shaped by environmental processes: Australia’s deserts (Outback)</p>
+                <img src="oceaniaGeographyImages/australianOutback.jpg" alt="Australian Outback">
+                <p>New Zealand’s glaciers</p>
+                <img src="oceaniaGeographyImages/newZealandGlacier.jpg" alt="New Zealand's glaciers image">
+                <p>and Papua New Guinea’s rainforests</p>
+                <img src="oceaniaGeographyImages/papaNewGuineaRainforest.png" alt="Papa New Guinea's Rainforests">
+                <button class="close-button" onclick="hideDetails('continental')">Close</button>
+            </div>
+            <div id="melanesia" class="details">
+                <h2>Melanesia (High Islands)</h2>
+                <p>Melanesia’s high islands, such as Fiji, Papua New Guinea, and Vanuatu, are volcanic in origin. Located along the Pacific Ring of Fire, they feature volcanic peaks like Mount Yasur and Mount Lamington.</p>
+                <img src="oceaniaGeographyImages/mountYasur.png" alt="Mount Yasur Image">
+                <p>Fertile soils from volcanic activity support rich ecosystems, while ridges and valleys characterize the physical geography.</p>
+                <img src="oceaniaGeographyImages/Vanuatu.jpg" alt="Vanuatu Image">
+                <button class="close-button" onclick="hideDetails('melanesia')">Close</button>
+            </div>
+            <div id="lowIslands" class="details">
+                <h2>Micronesia & Polynesia (Low Islands)</h2>
+                <p>Micronesia and Polynesia are dominated by low islands, often coral atolls formed around eroded volcanic islands. These islands, such as Kwajalein Atoll and Kiribati, have shallow lagoons surrounded by coral reefs. The unique environment fosters biodiversity, with species adapted to life on small, isolated islands.</p>
+                <img src="oceaniaGeographyImages/palauMicronesia.jpg" alt="Palau in Micronesia Mountian Image">
+                <button class="close-button" onclick="hideDetails('lowIslands')">Close</button>
+            </div>
+            <script>
+                function showDetails(regionId) {
+                    document.getElementById(regionId).style.display = 'block';
+                }
+            
+                function hideDetails(regionId) {
+                    document.getElementById(regionId).style.display = 'none';
+                }
+            </script>
+        </div>
     </div>
 </body>
 </html>

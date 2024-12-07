@@ -1,29 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Africa</title>
     <meta charset="UTF-8">
     <meta name="description" content="Africa Information">
     <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="Austin Medina, Lauren Goodrich, Enka Hysaj, Maddie Carlson">>
+    <meta name="author" content="Austin Medina, Lauren Goodrich, Enka Hysaj, Maddie Carlson">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Africa</title>
+    
     <style>
-        
+        .map-container {
+            position: relative;
+            display: block;
+            text-align: center; /* This will center the image horizontally */
+            margin-top: 20px; /* Optional: Adds some space between the paragraph and the map */
+        }
+
+        .map-image {
+            max-width: 700px;  /* Adjust size as needed */
+            width: 100%;       /* Ensures the image is responsive up to the max-width */
+            max-height: 600px;
+            height: 100%;      /* Maintains aspect ratio */
+            margin: 0 auto;    /* Centers the image horizontally */
+            display: block;    /* Ensures it behaves like a block element for centering */
+        }
+
+        .region-button {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transform: translate(-50%, -50%);
+        }
+
+        .region-button:hover {
+            background-color: rgba(255, 165, 0, 0.8);
+        }
+
+        .details {
+            display: none; /* Initially hidden */
+            position: fixed; /* Fix to viewport, not the document flow */
+            top: 50%; /* Move to the middle of the viewport */
+            left: 50%; /* Move to the middle of the viewport */
+            transform: translate(-50%, -50%); /* Adjust for the element's size */
+            z-index: 1000; /* Ensure it's above other elements */
+            border: 1px solid #ccc;
+            padding: 15px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
+            max-width: 90%; /* Make it responsive */
+            width: 400px; /* Set a default width */
+            border-radius: 8px; /* Optional: Rounded corners */
+        }
+
+        .details img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .close-button {
+            background: #f00;
+            color: #fff;
+            padding: 5px;
+            border: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="north-america.html">North America</a>
-        <a href="south-america.html">South America</a>
-        <a href="oceania.html">Oceania</a>
-        <a href="asia.html">Asia</a>
-        <a href="africa.html">Africa</a>
-        <a href="europe.html">Europe</a>
-        <a href="antarctica.html">Antarctica</a>
+        <a href="home.html">Home</a>
+        <a href="/northAmerica/northAmerica.html">North America</a>
+        <a href="/southAmerica/southAmerica.html">South America</a>
+        <a href="/oceania/oceania.html">Oceania</a>
+        <a href="/asia/asia.html">Asia</a>
+        <a href="/africa/africa.html">Africa</a>
+        <a href="/europe/europe.html">Europe</a>
+        <a href="/antarctica/antarctica.html">Antarctica</a>
     </nav>
     <div class="content">
         <h1>Africa</h1>
+        <div class="geography">
+            <h2>Geography</h2>
+            <p>Africa, the second-largest continent, is surrounded by the Mediterranean Sea, Red Sea, Indian Ocean, and Atlantic Ocean. The Equator divides it almost evenly. The continent is made up of eight major physical regions: the Sahara, Sahel, Ethiopian Highlands, savannas, Swahili Coast, rainforests, African Great Lakes, and Southern Africa, each hosting unique ecosystems.</p>
+            <div class="map-container">
+                <img src="africaGeographyImages/africaMap.png" alt="Africa Map" class="map-image">
+                <!-- Example button for Sahara -->
+                <div class="region-button" style="top: 20%; left: 40%;" onclick="showDetails('sahara')">
+                    Sahara
+                </div>
+                <!-- Add more buttons for other regions -->
+                <div class="region-button" style="top: 30%; left: 45%;" onclick="showDetails('sahel')">
+                    Sahel
+                </div>
+                <div class="region-button" style="top: 40%; left: 65%;" onclick="showDetails('ethiopianHighlands')">
+                    Ethiopian Highlands
+                </div>
+                <div class="region-button" style="top: 65%; left: 55%;" onclick="showDetails('savannas')">
+                    Savannas
+                </div>
+                <div class="region-button" style="top: 50%; left: 65%;" onclick="showDetails('swahili')">
+                    Swahili Coast
+                </div>
+                <div class="region-button" style="top: 50%; left: 50%;" onclick="showDetails('rainforests')">
+                    Rainforests
+                </div>
+                <div class="region-button" style="top: 57%; left: 58%;" onclick="showDetails('lakes')">
+                    African Great Lakes
+                </div>
+                <div class="region-button" style="top: 80%; left: 54%;" onclick="showDetails('southernAfrica')">
+                    Southern Africa
+                </div>
+            </div>
+            <!-- Details Sections -->
+            <div id="sahara" class="details">
+                <h2>Sahara</h2>
+                <p>The Sahara, the world’s largest hot desert, spans 8.5 million square kilometers, covering 25% of Africa. Its features include ergs (sand dunes), regs (gravel plains), hamadas (rock plateaus), and oases that support human life. Flora and fauna have adapted to the desert's arid conditions, such as camels conserving water and deep-rooted plants surviving scarce rainfall.</p>
+                <img src="africaGeographyImages/saharaImage.jpg" alt="Sahara Image">
+                <button class="close-button" onclick="hideDetails('sahara')">Close</button>
+            </div>
+            <div id="sahel" class="details">
+                <h2>Sahel</h2>
+                <p>The Sahel is a semi-arid zone between the Sahara and the savannas. Stretching 5,400 kilometers, it faces desertification due to climate change, overgrazing, and deforestation. Its vegetation appears briefly during the rainy season, supporting drought-resistant species like baobabs and zebu cattle. Political instability hampers conservation efforts in the region.</p>
+                <img src="africaGeographyImages/sahelImage.jpg" alt="Sahel Image">
+                <button class="close-button" onclick="hideDetails('sahel')">Close</button>
+            </div>
+            <div id="ethiopianHighlands" class="details">
+                <h2>Ethiopian Highlands</h2>
+                <p>The Ethiopian Highlands, home to 80% of Africa’s tallest mountains, were formed by ancient volcanic activity. Unique wildlife like the endangered Ethiopian wolf and gelada baboon thrive here. Native plants include the Ethiopian rose and ensete, a banana-like plant. Human encroachment threatens local ecosystems.</p>
+                <img src="africaGeographyImages/ethiopianHighlandsImage.png" alt="Ethiopian Highlands Image">
+                <button class="close-button" onclick="hideDetails('ethiopianHighlands')">Close</button>
+            </div>
+            <div id="savannas" class="details">
+                <h2>Savannas</h2>
+                <p>Savannas cover nearly half of Africa and are dominated by grasslands. The Serengeti Plains, renowned for their wildlife, host annual wildebeest migrations that rejuvenate the ecosystem. Ecotourism thrives here, but agricultural expansion threatens these grasslands.</p>
+                <img src="africaGeographyImages/savannasImage.jpg" alt="Savannas Image">
+                <button class="close-button" onclick="hideDetails('savannas')">Close</button>
+            </div>
+            <div id="swahili" class="details">
+                <h2>Swahili Coast</h2>
+                <p>The Swahili Coast stretches 2,900 kilometers along Kenya, Tanzania, and Mozambique. Its coral reefs and mangrove forests support limited wildlife like bush babies and elephant shrews. The region has long been a hub for trade, with major ports like Mombasa and Dar es Salaam.</p>
+                <img src="africaGeographyImages/swahiliCoastImage.png" alt="Swahili Coast Image">
+                <button class="close-button" onclick="hideDetails('swahili')">Close</button>
+            </div>
+            <div id="rainforests" class="details">
+                <h2>Rainforests</h2>
+                <p>Africa’s rainforests boast immense biodiversity, including gorillas, forest elephants, and okapi. They also feature unique plants, with many endemic species. Indigenous groups like the Mbuti and Twa have lived sustainably in the rainforests for centuries, though their way of life faces increasing threats.</p>
+                <img src="africaGeographyImages/rainforestImage.png" alt="Rainforest Image">
+                <button class="close-button" onclick="hideDetails('rainforests')">Close</button>
+            </div>
+            <div id="lakes" class="details">
+                <h2>African Great Lakes</h2>
+                <p>The African Great Lakes, formed by tectonic activity, are vital ecosystems and water sources. Lakes like Victoria and Tanganyika support diverse aquatic life, including fish species like Nile perch and cichlids. However, invasive species threaten local habitats, and the lakes serve as key resources for hydroelectric power.</p>
+                <img src="africaGeographyImages/lakesImage.png" alt="African Great Lakes Image">
+                <button class="close-button" onclick="hideDetails('lakes')">Close</button>
+            </div>
+            <div id="southernAfrica" class="details">
+                <h2>Southern Africa</h2>
+                <p>Southern Africa, dominated by ancient bedrock, is rich in wildlife and plant diversity. Its reserves protect species like lions, rhinos, and gazelles, while generating jobs and revenue. The Cape Floral Region, home to 20% of Africa’s flora, is a global biodiversity hotspot.</p>
+                <img src="africaGeographyImages/southernAfricaImage.jpg" alt="Southern Africa Image">
+                <button class="close-button" onclick="hideDetails('southernAfrica')">Close</button>
+            </div>
+            <script>
+                function showDetails(regionId) {
+                    document.getElementById(regionId).style.display = 'block';
+                }
+            
+                function hideDetails(regionId) {
+                    document.getElementById(regionId).style.display = 'none';
+                }
+            </script>
+        </div>
     </div>
 </body>
 </html>

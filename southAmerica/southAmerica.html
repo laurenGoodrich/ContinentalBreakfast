@@ -2,28 +2,140 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Africa Information">
+    <meta name="description" content="South America Information">
     <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="Austin Medina, Lauren Goodrich, Enka Hysaj, Maddie Carlson">>
+    <meta name="author" content="Austin Medina, Lauren Goodrich, Enka Hysaj, Maddie Carlson">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>South America</title>
     <style>
-        
+        .map-container {
+            position: relative;
+            display: block;
+            text-align: center; /* This will center the image horizontally */
+            margin-top: 20px; /* Optional: Adds some space between the paragraph and the map */
+        }
+
+        .map-image {
+            max-width: 700px;  /* Adjust size as needed */
+            width: 100%;       /* Ensures the image is responsive up to the max-width */
+            max-height: 600px;
+            height: 100%;      /* Maintains aspect ratio */
+            margin: 0 auto;    /* Centers the image horizontally */
+            display: block;    /* Ensures it behaves like a block element for centering */
+        }
+
+        .region-button {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transform: translate(-50%, -50%);
+        }
+
+        .region-button:hover {
+            background-color: rgba(255, 165, 0, 0.8);
+        }
+
+        .details {
+            display: none; /* Initially hidden */
+            position: fixed; /* Fix to viewport, not the document flow */
+            top: 50%; /* Move to the middle of the viewport */
+            left: 50%; /* Move to the middle of the viewport */
+            transform: translate(-50%, -50%); /* Adjust for the element's size */
+            z-index: 1000; /* Ensure it's above other elements */
+            border: 1px solid #ccc;
+            padding: 15px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
+            max-width: 90%; /* Make it responsive */
+            width: 400px; /* Set a default width */
+            border-radius: 8px; /* Optional: Rounded corners */
+            max-width: 90%; /* Make it responsive */
+            width: 400px; /* Set a default width */
+            max-height: 80%; /* Limit the height to 80% of the viewport */
+            overflow-y: auto; /* Enable scrolling for overflow content */
+        }
+
+        .details img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .close-button {
+            background: #f00;
+            color: #fff;
+            padding: 5px;
+            border: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="north-america.html">North America</a>
-        <a href="south-america.html">South America</a>
-        <a href="oceania.html">Oceania</a>
-        <a href="asia.html">Asia</a>
-        <a href="africa.html">Africa</a>
-        <a href="europe.html">Europe</a>
-        <a href="antarctica.html">Antarctica</a>
+        <a href="home.html">Home</a>
+        <a href="/northAmerica/northAmerica.html">North America</a>
+        <a href="/southAmerica/southAmerica.html">South America</a>
+        <a href="/oceania/oceania.html">Oceania</a>
+        <a href="/asia/asia.html">Asia</a>
+        <a href="/africa/africa.html">Africa</a>
+        <a href="/europe/europe.html">Europe</a>
+        <a href="/antarctica/antarctica.html">Antarctica</a>
     </nav>
     <div class="content">
         <h1>South America</h1>
+        <div class="geography">
+            <h2>Geography</h2>
+            <p>South America, the fourth-largest continent, stretches from the Gulf of Darién in the northwest to Tierra del Fuego in the south. Its geography is divided into three main regions: mountains and highlands, river basins, and coastal plains. These diverse regions support a range of biomes, from alpine tundras and rainforests to dry deserts and fertile grasslands, contributing to the continent's unparalleled biodiversity.</p>
+            <div class="map-container">
+                <img src="southAmericaGeographyImages/southAmericaMap.png" alt="Antarctica Map" class="map-image">
+                <!-- Buttons -->
+                <div class="region-button" style="top: 25%; left: 45%;" onclick="showDetails('mountains')">
+                    Andes Mountains and Highlands
+                </div>
+                <div class="region-button" style="top: 55%; left: 45%;" onclick="showDetails('coastal')">
+                    Coastal Plains
+                </div>
+                <div class="region-button" style="top: 30%; left: 60%;" onclick="showDetails('river')">
+                    River Basins
+                </div>
+            </div>
+            <!-- Details Sections -->
+            <div id="mountains" class="details">
+                <h2>Andes Mountains and Highlands</h2>
+                <p>The Andes, the world’s longest mountain range, span 8,850 kilometers (5,500 miles) along the continent's western edge. Peaks like Aconcagua, the tallest outside Asia at 6,962 meters (22,841 feet), tower over alpine biomes. Highlands like the altiplano in Peru and Bolivia and the Patagonian plateaus in Argentina and Chile add to the diverse landscapes. Unique plants like the Queen of the Andes and hardy alpine vegetation thrive in these environments. Beyond the Andes, the Brazilian and Guiana Highlands feature forested plateaus that support vibrant ecosystems.</p>
+                <img src="southAmericaGeographyImages/peruMountains.jpg" alt="Peru Mountains Image">
+                <button class="close-button" onclick="hideDetails('mountains')">Close</button>
+            </div>
+            <div id="coastal" class="details">
+                <h2>Coastal Plains</h2>
+                <p>South America’s coastal plains vary greatly by location. Northeastern Coast (Brazil): Dry plains where the Brazilian Highlands block moist winds.</p>
+                <img src="southAmericaGeographyImages/brazilCoast.png" alt="Brazil Coast Image">
+                <p>Western Coast (Peru and Chile): Extremely dry plains shaped by the Peru Current and Andes Mountains, including the Atacama Desert, the driest place on Earth. This area supports minimal flora and fauna, but rich copper deposits fuel the Chilean economy.</p>
+                <img src="southAmericaGeographyImages/atacamaDesert.jpg" alt="Atacama Desert Image">
+                <button class="close-button" onclick="hideDetails('coastal')">Close</button>
+            </div>
+            <div id="river" class="details">
+                <h2>River Basins</h2>
+                <p>South America’s major river basins—Amazon, Orinoco, and Paraguay/Paraná—define much of its geography. Amazon River Basin: The world’s largest watershed spans 7 million square kilometers (2.7 million square miles) and supports the Amazon rainforest, a tropical biome teeming with diverse flora (rubber trees, lianas) and fauna (macaws, sloths, and howler monkeys).</p>
+                <img src="southAmericaGeographyImages/amazonRiver.png" alt="Amazon River Image">
+                <p>Orinoco River Basin: Encompassing much of Venezuela and parts of Colombia, this basin includes the Llanos savanna biome, home to grasslands and species like the Orinoco crocodile and scarlet ibis.</p>
+                <img src="southAmericaGeographyImages/orinocoRiverBasin.png" alt="Orinoco River Basin Image">
+                <p>Paraguay/Paraná Basin: Covering parts of Brazil, Bolivia, Paraguay, and Argentina, this basin feeds the fertile Pampas grasslands, key for agriculture and grazing. Iconic features include Iguazu Falls and the populous Rio de la Plata estuary.</p>
+                <img src="southAmericaGeographyImages/iguazuFalls.jpg" alt="Iguazu Falls Image">
+                <button class="close-button" onclick="hideDetails('river')">Close</button>
+            </div>
+            <script>
+                function showDetails(regionId) {
+                    document.getElementById(regionId).style.display = 'block';
+                }
+            
+                function hideDetails(regionId) {
+                    document.getElementById(regionId).style.display = 'none';
+                }
+            </script>
+        </div>
     </div>
 </body>
 </html>

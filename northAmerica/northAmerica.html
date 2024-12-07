@@ -2,28 +2,176 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Africa Information">
+    <meta name="description" content="North America Information">
     <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="Austin Medina, Lauren Goodrich, Enka Hysaj, Maddie Carlson">>
+    <meta name="author" content="Austin Medina, Lauren Goodrich, Enka Hysaj, Maddie Carlson">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>North America</title>
     <style>
-        
+        .map-container {
+            position: relative;
+            display: block;
+            text-align: center; /* This will center the image horizontally */
+            margin-top: 20px; /* Optional: Adds some space between the paragraph and the map */
+        }
+
+        .map-image {
+            max-width: 700px;  /* Adjust size as needed */
+            width: 100%;       /* Ensures the image is responsive up to the max-width */
+            max-height: 600px;
+            height: 100%;      /* Maintains aspect ratio */
+            margin: 0 auto;    /* Centers the image horizontally */
+            display: block;    /* Ensures it behaves like a block element for centering */
+        }
+
+        .region-button {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transform: translate(-50%, -50%);
+        }
+
+        .region-button:hover {
+            background-color: rgba(255, 165, 0, 0.8);
+        }
+
+        .details {
+            display: none; /* Initially hidden */
+            position: fixed; /* Fix to viewport, not the document flow */
+            top: 50%; /* Move to the middle of the viewport */
+            left: 50%; /* Move to the middle of the viewport */
+            transform: translate(-50%, -50%); /* Adjust for the element's size */
+            z-index: 1000; /* Ensure it's above other elements */
+            border: 1px solid #ccc;
+            padding: 15px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
+            max-width: 90%; /* Make it responsive */
+            width: 400px; /* Set a default width */
+            border-radius: 8px; /* Optional: Rounded corners */
+            max-width: 90%; /* Make it responsive */
+            width: 400px; /* Set a default width */
+            max-height: 80%; /* Limit the height to 80% of the viewport */
+            overflow-y: auto; /* Enable scrolling for overflow content */
+        }
+
+        .details img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .close-button {
+            background: #f00;
+            color: #fff;
+            padding: 5px;
+            border: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="north-america.html">North America</a>
-        <a href="south-america.html">South America</a>
-        <a href="oceania.html">Oceania</a>
-        <a href="asia.html">Asia</a>
-        <a href="africa.html">Africa</a>
-        <a href="europe.html">Europe</a>
-        <a href="antarctica.html">Antarctica</a>
+        <a href="home.html">Home</a>
+        <a href="/northAmerica/northAmerica.html">North America</a>
+        <a href="/southAmerica/southAmerica.html">South America</a>
+        <a href="/oceania/oceania.html">Oceania</a>
+        <a href="/asia/asia.html">Asia</a>
+        <a href="/africa/africa.html">Africa</a>
+        <a href="/europe/europe.html">Europe</a>
+        <a href="/antarctica/antarctica.html">Antarctica</a>
     </nav>
     <div class="content">
         <h1>North America</h1>
+        <div class="geography">
+            <h2>Geography</h2>
+            <p>North America, the third-largest continent, spans from the Aleutian Islands in the northwest to the Isthmus of Panama in the south. It includes Greenland in the northeast and the islands of the Caribbean Sea and western North Atlantic. Its diverse physical geography comprises five major regions: the mountainous west, the Great Plains, the Canadian Shield, the varied eastern region, and the Caribbean. These regions contain nearly all the world’s biomes, from deserts and grasslands to tundras and coral reefs.</p>
+            <div class="map-container">
+                <img src="northAmericaGeographyImages/northAmericaMap.png" alt="Antarctica Map" class="map-image">
+                <!-- Buttons -->
+                <div class="region-button" style="top: 65%; left: 45%;" onclick="showDetails('westernRegion')">
+                    Western Region
+                </div>
+                <div class="region-button" style="top: 70%; left: 55%;" onclick="showDetails('greatPlains')">
+                    Great Plains
+                </div>
+                <div class="region-button" style="top: 50%; left: 60%;" onclick="showDetails('canadianSheild')">
+                    Canadian Shield
+                </div>
+                <div class="region-button" style="top: 70%; left: 67%;" onclick="showDetails('easternRegion')">
+                    Eastern Region
+                </div>
+                <div class="region-button" style="top: 90%; left: 60%;" onclick="showDetails('caribbean')">
+                    Caribbean Region
+                </div>
+                <div class="region-button" style="top: 30%; left: 40%;" onclick="showDetails('naturalWonders')">
+                    Natural Wonders
+                </div>
+            </div>
+            <!-- Details Sections -->
+            <div id="westernRegion" class="details">
+                <h2>Western Region</h2>
+                <p>The western region features young mountain ranges, such as the Rockies, which stretch from British Columbia to New Mexico, and the Sierra Madre system extending from the southwestern U.S. into Central America. This area is part of the larger Cordilleras, a network of mountain ranges running from Canada to Panama. Volcanic activity in this region has created fertile soils but also poses hazards like eruptions and earthquakes.</p>
+                <img src="northAmericaGeographyImages/rockyMountains.jpg" alt="Rocky Mountian Image">
+                <p>The Cascade Range, a temperate rainforest in the Pacific Northwest, receives 100–200 inches of rainfall annually, supporting unique flora like Douglas fir and fauna like Roosevelt elk.</p>
+                <img src="northAmericaGeographyImages/mtRanier.jpg" alt="Mount Rainier Image">
+                <p>Deserts such as the Sonoran, Mojave, and Chihuahuan, located in the U.S. and northern Mexico, thrive in the rain shadows of nearby mountain ranges. These deserts feature iconic plants like the saguaro cactus and wildlife such as Gila monsters and rattlesnakes. The western region is also rich in offshore oil and natural gas deposits.</p>
+                <img src="northAmericaGeographyImages/sonoranDesert.jpg" alt="Sonoran Desert Image">
+                <button class="close-button" onclick="hideDetails('westernRegion')">Close</button>
+            </div>
+            <div id="greatPlains" class="details">
+                <h2>Great Plains</h2>
+                <p>The Great Plains lie at the center of the continent, characterized by deep, fertile soil deposited during the last ice age. This "Breadbasket of North America" supports vast grain production and oil and gas deposits. The plains are dominated by grassland biomes, ranging from tallgrass to shortgrass prairies, and host species like bison and prairie dogs. The region's climate, marked by extreme weather, is ideal for native grasses but limits the growth of larger vegetation.</p>
+                <img src="northAmericaGeographyImages/greatPlains.jpg" alt="Great Plains Image">
+                <button class="close-button" onclick="hideDetails('greatPlains')">Close</button>
+            </div>
+            <div id="canadianSheild" class="details">
+                <h2>Canadian Sheild</h2>
+                <p>The Canadian Shield, a vast plateau of ancient rock, stretches across eastern, central, and northwestern Canada. Its tundra biome is marked by permafrost, which keeps moisture near the surface, enabling vegetation like lichens and mosses to thrive in the Arctic climate. This supports wildlife such as caribou and musk oxen. During summer, the thaw creates shallow lakes and bogs that add to the region’s unique biodiversity.</p>
+                <img src="northAmericaGeographyImages/canadianShield.jpg" alt="Lake in the Canadian Shield Image">
+                <button class="close-button" onclick="hideDetails('canadianSheild')">Close</button>
+            </div>
+            <div id="easternRegion" class="details">
+                <h2>Eastern Region</h2>
+                <p>The eastern region includes the Appalachian Mountains and the Atlantic coastal plain. The Appalachians, among North America’s oldest mountains, have been mined for coal and minerals for centuries.</p>
+                <img src="northAmericaGeographyImages/appalachianMountains.jpg" alt="Appalachian Mountains Image">
+                <p>The coastal plain features wetlands like the Everglades, a biologically diverse system of sawgrass marshes, cypress trees, and mangroves. The Everglades provide habitats for alligators and wading birds, making it an essential ecosystem for wildlife conservation.</p>
+                <img src="northAmericaGeographyImages/everglades.jpg" alt="Everglades Image">
+                <button class="close-button" onclick="hideDetails('easternRegion')">Close</button>
+            </div>
+            <div id="caribbean" class="details">
+                <h2>Caribbean Region</h2>
+                <p>The Caribbean consists of more than 7,000 islands, islets, reefs, and cays, ranging from flat, sandy islands to rugged volcanic terrain. Coral reefs in the Caribbean Sea are vibrant biomes, supporting seagrass, tropical fish, sharks, and sea turtles. The Florida Keys, a chain of cays near southern Florida, are part of this ecosystem. These reefs play a vital role in maintaining marine biodiversity.</p>
+                <img src="northAmericaGeographyImages/floridaKeysIsland.jpg" alt="Island in the Florida Keys Image">
+                <button class="close-button" onclick="hideDetails('caribbean')">Close</button>
+            </div>
+            <div id="naturalWonders" class="details">
+                <h2>Natural Wonders</h2>
+                <p>North America is home to remarkable natural features, including Denali, the continent's highest peak.</p>
+                <img src="northAmericaGeographyImages/denaliNationalPark.jpg" alt="Denali National Park Alaska Image">
+                <p>The Great Lakes, the largest freshwater system on Earth.</p>
+                <img src="northAmericaGeographyImages/niagraFalls.jpg" alt="Niagra Falls Image">
+                <p>Other highlights include Yellowstone National Park’s geysers.</p>
+                <img src="northAmericaGeographyImages/geiserYellowstone.jpg" alt="Yellowston National Park Image">
+                <p>Canada’s Bay of Fundy with the world’s highest tides.</p>
+                <img src="northAmericaGeographyImages/bayOfFundy.jpg" alt="Bay of Fundy Image">
+                <p>And the Mississippi River, which drains parts of 31 U.S. states.</p>
+                <img src="northAmericaGeographyImages/mississippiRiver.jpg" alt="Mississippi River image">
+                <p>These landmarks showcase the continent's diverse and dynamic landscapes.</p>
+                <button class="close-button" onclick="hideDetails('naturalWonders')">Close</button>
+            </div>
+            <script>
+                function showDetails(regionId) {
+                    document.getElementById(regionId).style.display = 'block';
+                }
+            
+                function hideDetails(regionId) {
+                    document.getElementById(regionId).style.display = 'none';
+                }
+            </script>
+        </div>
     </div>
 </body>
 </html>
