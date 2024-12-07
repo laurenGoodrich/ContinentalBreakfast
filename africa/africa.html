@@ -7,7 +7,8 @@
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Austin Medina, Lauren Goodrich, Enka Hysaj, Maddie Carlson">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="style.css">
+    <script src="africaQuiz.js" defer></script>
     <style>
         .map-container {
             position: relative;
@@ -82,7 +83,7 @@
     </nav>
     <div class="content">
         <h1>Africa</h1>
-        <div class="geography">
+        <section class="geography">
             <h2>Geography</h2>
             <p>Africa, the second-largest continent, is surrounded by the Mediterranean Sea, Red Sea, Indian Ocean, and Atlantic Ocean. The Equator divides it almost evenly. The continent is made up of eight major physical regions: the Sahara, Sahel, Ethiopian Highlands, savannas, Swahili Coast, rainforests, African Great Lakes, and Southern Africa, each hosting unique ecosystems.</p>
             <div class="map-container">
@@ -172,7 +173,53 @@
                     document.getElementById(regionId).style.display = 'none';
                 }
             </script>
-        </div>
+        </section>
+        <section id="ecology">
+            <h2>Ecology</h2>
+                <h3>Biodiversity</h3>
+                    <p>The continent of Africa is renowed for its flourshing biodiversity. 
+                        It is home to the "Big Five" animals: lions, leopards, rhinoceroses, elephants, 
+                        and Cape Buffaloes. The reason these animals are called the "Big Five" is because 
+                        they are extremely dangerous, and early hunters could not hunt them on foot.</p>
+
+                        <p>Click the image below to reveal a fun fact:</p>
+                        <div class="image-container">
+                            <img src="lion.jpg" alt="Lion" class="clickable-image">
+                            <p class="fun-fact" style="display: none;">Lions can sleep up to 20 hours a day!</p>
+                        </div>
+
+                        <p>In addition, the continent contains vast savannah ecosystems that are home to some of 
+                        the largest land animal populations in the world. Unique flora like the majestic 
+                        baobab tree, often called the "tree of life," and drought-resistant acacias play
+                        a crucial role in maintaining the ecological balance of these regions.</p>
+
+                <h3>Ecosystems</h3>
+                    <p>Africa's major ecosystems are not only diverse, but they are also extremely striking. 
+                        The Congo Basin houses one of the largest rainforests on Earth, providing a habitat 
+                        for gorillas, forest elephants, and an array of plant species. This rainforest is also 
+                        known as one of the largest carbon sinks, meaning that the diverse tree species and other 
+                        vegetation are harboring up to 30 billion tons of carbon. </p>
+
+                    <p>The vast Sahara Desert, while seemingly barren, supports resilient species like the 
+                        fennec fox and hardy plants such as date palms, all adapted to its extreme conditions. 
+                        Underground water sources, or oases, are vital lifelines in this arid expanse, sustaining 
+                        diverse microhabitats where grasses and shrubs can flourish. Even the shifting sands 
+                        of the Sahara are home to creatures like sandfish lizards and scorpions, which showcases
+                        extraordinary evolutionary adaptations in order to survive one of the harshest environments. </p>
+            
+                    <p>Grasslands and savannas are among Africa's most iconic ecosystems, covering vast 
+                        stretches of the continent and playing a critical role in supporting its biodiversity. 
+                        These open landscapes are characterized by their grasses, scattered trees, and seasonal 
+                        rainfall. One of the most remarkable phenomena in these ecosystems is the massive migrations 
+                        of land animals, such as wildebeest, zebras, and gazelles, which traverse the savannas in 
+                        search of fresh grazing grounds and water during seasonal shifts. </p>
+
+                <h3>Conservation</h3>
+                    <p>Conservation efforts in Africa are targeted towards protecting endangered species like mountain gorillas, 
+                        cheetahs, and African wild dogs, which face numerous threats. Deforestation driven by 
+                        agricultural expansion and urban development, as well as poaching for ivory and bushmeat, 
+                        continue to challenge the preservation of Africa's unique ecosystems.</p>
+        </section>
     </div>
 </body>
 </html>

@@ -71,6 +71,8 @@
             cursor: pointer;
         }
     </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="northAmerica.js" defer></script>
 </head>
 <body>
     <nav>
@@ -85,7 +87,7 @@
     </nav>
     <div class="content">
         <h1>North America</h1>
-        <div class="geography">
+        <section class="geography">
             <h2>Geography</h2>
             <p>North America, the third-largest continent, spans from the Aleutian Islands in the northwest to the Isthmus of Panama in the south. It includes Greenland in the northeast and the islands of the Caribbean Sea and western North Atlantic. Its diverse physical geography comprises five major regions: the mountainous west, the Great Plains, the Canadian Shield, the varied eastern region, and the Caribbean. These regions contain nearly all the world’s biomes, from deserts and grasslands to tundras and coral reefs.</p>
             <div class="map-container">
@@ -171,7 +173,48 @@
                     document.getElementById(regionId).style.display = 'none';
                 }
             </script>
-        </div>
+        </section>
+        <section>
+            <h2>Biodiversity</h2>
+                <p>North America is a continent of striking ecological diversity, shaped by its vast 
+                    range of climates and landscapes. From the frozen tundras of Canada and Alaska to 
+                    the arid deserts of the Southwest, the continent supports a wide array of plant and 
+                    animal life. </p>
+
+                <p>Iconic species such as bison, bald eagles, and grizzly bears symbolize 
+                    the wilderness of North America. The continent is also home to unique plant ecosystems, 
+                    including the towering redwood forests of California and the resilient cacti of the 
+                    Sonoran Desert, which are adapted to survive in harsh, dry conditions.</p>
+            
+                    <p>Click the image below to reveal a fun fact:</p>
+                <div class="image-container">
+                    <img src="redwood.jpg" alt="Redwood Tree" class="clickable-image">
+                    <p class="fun-fact" style="display: none;">Redwood trees can clone themselves! When a redwood tree is damaged or cut down, it can sprout new trees, called "clonal saplings," from its base or roots.</p>
+                </div>
+
+            <h2>Ecosystems</h2>
+                <p>North America's major ecosystems are as varied as its geography. In the north, boreal 
+                    forests stretch across Canada and Alaska, creating one of the largest continuous 
+                    forested regions on Earth. These forests are critical habitats for species like 
+                    moose, lynx, and wolves.</p>
+    
+                <p>In the southeastern United States, wetlands like the Everglades provide a home to 
+                    alligators, manatees, and countless bird species while playing a vital role in water 
+                    purification and flood control. Meanwhile, the deserts of the Southwest, such as the 
+                    Sonoran Desert, are hotspots of biodiversity, supporting specialized flora like 
+                    saguaros and fauna like roadrunners and rattlesnakes.</p>
+
+            <h2>Conservation</h2>
+                <p>Conservation efforts in North America have been significantly advanced by the 
+                    national parks system, which has set aside vast areas to protect the continent's 
+                    natural heritage. Iconic parks like Yellowstone and Yosemite not only preserve 
+                    biodiversity but also offer opportunities for education and recreation. However, 
+                    challenges persist, including the increasing frequency of wildfires, which 
+                    threaten forests and wildlife, and deforestation due to urban expansion and agriculture. 
+                    Addressing these issues is vital to maintaining the ecological balance and natural 
+                    beauty of North America.</p>
+            
+        </section>
     </div>
 </body>
 </html>

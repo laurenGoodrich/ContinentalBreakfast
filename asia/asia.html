@@ -7,6 +7,8 @@
     <meta name="author" content="Austin Medina, Lauren Goodrich, Enka Hysaj, Maddie Carlson">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asia</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="asiaQuiz.js" defer></script>
     <style>
         .map-container {
             position: relative;
@@ -81,7 +83,7 @@
     </nav>
     <div class="content">
         <h1>Asia</h1>
-        <div class="geography">
+        <section class="geography">
             <h2>Geography</h2>
             <p>Asia, the largest continent, covers 30% of Earth’s land area and is home to 60% of the world’s population. It is characterized by a diverse landscape divided into five major physical regions: mountain systems, plateaus, plains and deserts, freshwater environments, and saltwater environments. Each region shapes the continent's unique geography, culture, and ecosystems, making Asia a key player in global history and ecological significance.</p>
             <div class="map-container">
@@ -152,7 +154,49 @@
                     document.getElementById(regionId).style.display = 'none';
                 }
             </script>
-        </div>
+        </section>
+        <section id="ecology">
+            <h2>Biodiversity</h2>
+                <p>Asia is the largest continent on Earth, boasting an incredible diversity of 
+                    ecosystems and species. Its vast size allows for the greatest range of climates, 
+                    from the icy tundras of Siberia to the steamy tropical forests of Southeast Asia.</p>
+
+                <p>Asia is home to some of the world's most iconic animals, such as tigers, pandas, 
+                    snow leopards, and Asian elephants. These species are not only emblematic of the 
+                    continent but are also integral to their ecosystems. Asia's plant life is equally 
+                    diverse, with delicate cherry blossoms painting the landscapes of Japan in spring 
+                    and vast bamboo forests providing crucial habitats for animals like the giant panda</p>
+
+            <h2>Ecosystems</h2>
+                <p>The continent's major ecosystems are as varied as its landscapes. In the north, 
+                    the Siberian tundra and boreal forests stretch for thousands of miles, dominated 
+                    by hardy conifers and supporting species like reindeer and wolves.</p>
+                    
+                <p>In the tropical regions of Southeast Asia, lush rainforests teem with life, from 
+                    colorful birds and reptiles to rare primates like orangutans. Meanwhile, the 
+                    towering Himalayas, the world's highest mountain range, host unique high-altitude 
+                    cosystems. These support species such as the snow leopard and yaks, along with a 
+                    variety of alpine plants that have adapted to the thin air and cold temperatures.</p>
+
+            <h2>Conservation</h2>
+                <p>Conservation efforts across Asia are critical due to the continent's growing 
+                    urbanization and agricultural expansion, which lead to significant habitat loss. 
+                    Tigers, once widespread across Asia, now face extinction in many regions, prompting 
+                    focused conservation projects like tiger reserves in India.</p>
+
+                    <p>Click the image below to reveal a fun fact:</p>
+                    <div class="image-container">
+                        <img src="tiger.jpg" alt="Tiger" class="clickable-image">
+                        <p class="fun-fact" style="display: none;">No two tigers have the same stripe pattern, making their stripes as unique as human fingerprints!</p>
+                    </div>
+
+                <p>Similarly, efforts to protect giant pandas in China have included the creation of specialized reserves 
+                    and breeding programs, helping to slowly stabilize their population. While these 
+                    efforts are encouraging, much work remains to address the threats posed by 
+                    deforestation, pollution, and climate change, ensuring Asia's unique ecological 
+                    heritage endures for future generations.</p>
+
+        </section>
     </div>
 </body>
 </html>
