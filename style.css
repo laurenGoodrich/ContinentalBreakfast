@@ -414,3 +414,49 @@ tr:nth-child(odd) {
     border-radius: 5px;
     margin-top: -1px; 
 }
+
+.header {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 20px; 
+    text-align: center;
+}
+
+.logo {
+    max-width: 120px;
+    height: auto;
+    margin-right: 15px; 
+}
+
+.title {
+    font-size: 2rem; 
+    font-weight: bold; 
+    color: white; 
+    margin: 0; 
+}
+
+.header img:hover {
+    transform: scale(1.05); 
+}
+
+#multimedia {
+    width: 100%;           
+    max-width: 800px;
+    height: 400px;
+    aspect-ratio: 16 / 9;   
+    border-radius: 8px;    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    margin: 20px 0;        
+}
+
+.video-container {
+    display: flex;          
+    justify-content: center;    
+    align-items: center;  
+    margin: 20px;  
+}
+
+
+
