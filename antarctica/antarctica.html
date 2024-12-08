@@ -10,24 +10,26 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="../home.html">Home</a></li>
-            <li><a href="../northAmerica/northAmerica.html">North America</a></li>
-            <li><a href="../southAmerica/southAmerica.html">South America</a></li>
-            <li><a href="../oceania/oceania.html">Oceania</a></li>
-            <li><a href="../asia/asia.html">Asia</a></li>
-            <li><a href="../africa/africa.html">Africa</a></li>
-            <li><a href="../europe/europe.html">Europe</a></li>
-            <li><a href="../antarctica/antarctica.html">Antarctica</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="../northAmerica/northAmerica.html">North America</a></li>
+                <li><a href="../southAmerica/southAmerica.html">South America</a></li>
+                <li><a href="../oceania/oceania.html">Oceania</a></li>
+                <li><a href="../asia/asia.html">Asia</a></li>
+                <li><a href="../africa/africa.html">Africa</a></li>
+                <li><a href="../europe/europe.html">Europe</a></li>
+                <li><a href="../antarctica/antarctica.html">Antarctica</a></li>
+            </ul>
+        </nav>
+    </header>
     
-    <div class="content">
+    <main>
         <h1>Antarctica</h1>
         <section class="geography">
             <h2>Geography</h2>
-            <p>Antarctica, the southernmost continent, is a land of extremes. Known as the coldest, windiest, and driest place on Earth, it is the largest desert and a hub for scientific exploration. Completely covered in ice and surrounded by frigid oceans, Antarctica is home to unique geological features, rich research opportunities, and an unparalleled glimpse into Earth’s climatic history, all while remaining uninhabitable for permanent human settlement.</p>
+            <p>Antarctica, the southernmost continent, is a land of extremes. Known as the coldest, windiest, and driest place on Earth, it is the largest desert and a hub for scientific exploration. Completely covered in ice and surrounded by frigid oceans, Antarctica is home to unique geological features, rich research opportunities, and an unparalleled glimpse into Earth's climatic history, all while remaining uninhabitable for permanent human settlement.</p>
             <div class="map-container">
                 <img src="antarcticaGeographyImages/antarcticaMap.png" alt="Antarctica Map" class="map-image">
                 <div class="region-button" style="top: 20%; left: 70%;" onclick="showDetails('ocean')">
@@ -57,7 +59,7 @@
             </div>
             <div id="volcano" class="details">
                 <h2>Volcanic Activity</h2>
-                <p>Despite being a frozen landscape, Antarctica has volcanic activity. Mount Erebus, located on Ross Island, is the continent’s most active volcano and the southernmost active volcano on Earth. Most volcanic and tectonic activity occurs in Lesser Antarctica, which is part of the Pacific “Ring of Fire,” a region of significant geological movement known for earthquakes and volcanic eruptions.</p>
+                <p>Despite being a frozen landscape, Antarctica has volcanic activity. Mount Erebus, located on Ross Island, is the continent's most active volcano and the southernmost active volcano on Earth. Most volcanic and tectonic activity occurs in Lesser Antarctica, which is part of the Pacific “Ring of Fire,” a region of significant geological movement known for earthquakes and volcanic eruptions.</p>
                 <img src="antarcticaGeographyImages/volcanoImage.png" alt="Volcanic Activity Image">
                 <button class="close-button" onclick="hideDetails('volcano')">Close</button>
             </div>
@@ -81,7 +83,7 @@
             </div>
             <div id="funFact1" class="details">
                 <h2>Ice Sheet and Pack Ice</h2>
-                <p>The Antarctic Ice Sheet is the largest single mass of ice on Earth, with some areas reaching thicknesses of up to 3.2 kilometers (2 miles). During the winter months, the continents surface area effectively doubles as pack ice spreads into the surrounding oceans. Ice shelves, such as the Ross and Ronne Ice Shelves, are floating extensions of this massive ice sheet, growing as glaciers flow from the continent’s interior toward the coast.</p>
+                <p>The Antarctic Ice Sheet is the largest single mass of ice on Earth, with some areas reaching thicknesses of up to 3.2 kilometers (2 miles). During the winter months, the continents surface area effectively doubles as pack ice spreads into the surrounding oceans. Ice shelves, such as the Ross and Ronne Ice Shelves, are floating extensions of this massive ice sheet, growing as glaciers flow from the continent's interior toward the coast.</p>
                 <img src="antarcticaGeographyImages/iceShelfImage.jpg" alt="Ice Shelf Image">
                 <button class="close-button" onclick="hideDetails('funFact1')">Close</button>
             </div>
@@ -275,7 +277,7 @@
             </form>
         </div>
         
-    </div>
+    </main>
 
     <script src="antarctica.js"></script>
     <script src="../home.js"></script>

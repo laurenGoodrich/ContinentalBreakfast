@@ -136,7 +136,6 @@ nav ul li a.active {
     background-color: rgb(165, 194, 232);
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 4px;
-    width: 90%;
 }
 
 .quiz {
@@ -247,7 +246,7 @@ form > p {
     background-color: #45a049;
 }
 
-.content {
+main {
     padding: 20px;
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
@@ -302,15 +301,15 @@ section p {
 }
 
 .ecology {
-    background-color: #2e853b83;
+    background-color: #06B300;
 }
 
 .geography {
-    background-color: #80463077;
+    background-color: #CB8972;
 }
 
 #culture {
-    background-color: #8c2ac477;
+    background-color: #CA95E9;
 }
 
 footer {

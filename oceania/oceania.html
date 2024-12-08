@@ -10,23 +10,25 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="../home.html">Home</a></li>
-            <li><a href="../northAmerica/northAmerica.html">North America</a></li>
-            <li><a href="../southAmerica/southAmerica.html">South America</a></li>
-            <li><a href="../oceania/oceania.html">Oceania</a></li>
-            <li><a href="../asia/asia.html">Asia</a></li>
-            <li><a href="../africa/africa.html">Africa</a></li>
-            <li><a href="../europe/europe.html">Europe</a></li>
-            <li><a href="../antarctica/antarctica.html">Antarctica</a></li>
-        </ul>
-    </nav>    
-    <div class="content">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="../northAmerica/northAmerica.html">North America</a></li>
+                <li><a href="../southAmerica/southAmerica.html">South America</a></li>
+                <li><a href="../oceania/oceania.html">Oceania</a></li>
+                <li><a href="../asia/asia.html">Asia</a></li>
+                <li><a href="../africa/africa.html">Africa</a></li>
+                <li><a href="../europe/europe.html">Europe</a></li>
+                <li><a href="../antarctica/antarctica.html">Antarctica</a></li>
+            </ul>
+        </nav>
+    </header> 
+    <main>
         <h1>Oceania</h1>
         <section class="geography">
             <h2>Geography</h2>
-            <p>Oceania, a region of thousands of islands in the Central and South Pacific, is dominated by Australia, Zealandia (New Zealand), and Papua New Guinea. It also includes three island groups: Melanesia, Micronesia, and Polynesia. Oceania’s islands are grouped into three types—continental islands, high islands, and low islands—each with unique geography and formation.</p>
+            <p>Oceania, a region of thousands of islands in the Central and South Pacific, is dominated by Australia, Zealandia (New Zealand), and Papua New Guinea. It also includes three island groups: Melanesia, Micronesia, and Polynesia. Oceania's islands are grouped into three types—continental islands, high islands, and low islands—each with unique geography and formation.</p>
             <div class="map-container">
                 <img src="oceaniaGeographyImages/oceanaMap.png" alt="Antarctica Map" class="map-image">
                 <div class="region-button" style="top: 45%; left: 45%;" onclick="showDetails('continental')">
@@ -47,17 +49,17 @@
                 <img src="oceaniaGeographyImages/southernAlpsNZ.jpg" alt="Southern Alps New Zealand Image">
                 <p>and New Guinea Highlands</p>
                 <img src="oceaniaGeographyImages/newGuineaHighlands.png" alt="New Guinea Highlands Image">
-                <p>Each has unique landscapes shaped by environmental processes: Australia’s deserts (Outback)</p>
+                <p>Each has unique landscapes shaped by environmental processes: Australia's deserts (Outback)</p>
                 <img src="oceaniaGeographyImages/australianOutback.jpg" alt="Australian Outback">
-                <p>New Zealand’s glaciers</p>
+                <p>New Zealand's glaciers</p>
                 <img src="oceaniaGeographyImages/newZealandGlacier.jpg" alt="New Zealand's glaciers image">
-                <p>and Papua New Guinea’s rainforests</p>
+                <p>and Papua New Guinea's rainforests</p>
                 <img src="oceaniaGeographyImages/papaNewGuineaRainforest.png" alt="Papa New Guinea's Rainforests">
                 <button class="close-button" onclick="hideDetails('continental')">Close</button>
             </div>
             <div id="melanesia" class="details">
                 <h2>Melanesia (High Islands)</h2>
-                <p>Melanesia’s high islands, such as Fiji, Papua New Guinea, and Vanuatu, are volcanic in origin. Located along the Pacific Ring of Fire, they feature volcanic peaks like Mount Yasur and Mount Lamington.</p>
+                <p>Melanesia's high islands, such as Fiji, Papua New Guinea, and Vanuatu, are volcanic in origin. Located along the Pacific Ring of Fire, they feature volcanic peaks like Mount Yasur and Mount Lamington.</p>
                 <img src="oceaniaGeographyImages/mountYasur.png" alt="Mount Yasur Image">
                 <p>Fertile soils from volcanic activity support rich ecosystems, while ridges and valleys characterize the physical geography.</p>
                 <img src="oceaniaGeographyImages/Vanuatu.jpg" alt="Vanuatu Image">
@@ -119,10 +121,10 @@
         <section id="culture">
             <h2>Oceania's Culture</h2>
             <p>
-                The Pacific Islands, home to the world’s most diverse range of indigenous cultures, preserve many ancestral traditions due to 
+                The Pacific Islands, home to the world's most diverse range of indigenous cultures, preserve many ancestral traditions due to 
                 historical isolation and colonial neglect. Despite a population of fewer than 6.5 million, Oceania boasts remarkable cultural and ecological diversity, with Papua New Guinea alone 
-                accounting for about one-third of the world’s languages. Spread across varied environments, from Papua New Guinea’s mountains to urban centers like Auckland, most Pacific Islanders 
-                live in Melanesia’s rural, land-rich states, while many Micronesians and Polynesians reside in cities or migrate to metropolitan areas in Australia, New Zealand, and the U.S. Oceania 
+                accounting for about one-third of the world's languages. Spread across varied environments, from Papua New Guinea's mountains to urban centers like Auckland, most Pacific Islanders 
+                live in Melanesia's rural, land-rich states, while many Micronesians and Polynesians reside in cities or migrate to metropolitan areas in Australia, New Zealand, and the U.S. Oceania 
                 faces significant cultural threats from global political and economic pressures.
             </p>
             <p>
@@ -133,8 +135,8 @@
                     <div class="dropdown-content">
                         <p>
                             Oceanic cultures face unique political influences, with indigenous peoples often maintaining majority status in their homelands, unlike typical marginalized societies. In Melanesia, 
-                            postcolonial independence brought governance by indigenous elites, but cultural identity remains a point of contention, as seen in Bougainville’s rebellion against Papua New Guinea 
-                            and Fiji’s military government invoking cultural values to justify discriminatory policies. Meanwhile, Christianity, once resisted, has become deeply integrated into Oceanic traditions and 
+                            postcolonial independence brought governance by indigenous elites, but cultural identity remains a point of contention, as seen in Bougainville's rebellion against Papua New Guinea 
+                            and Fiji's military government invoking cultural values to justify discriminatory policies. Meanwhile, Christianity, once resisted, has become deeply integrated into Oceanic traditions and 
                             political narratives.
                         </p>
                         <img src="oceaniaCultureImages/papaNewGuinea.jpg" alt="Image of Culture in Oceania" style="width:300px; height:auto;">
@@ -145,7 +147,7 @@
                         </p>
                         <p>
                             Land remains central to cultural identity, yet population growth, militarization, and resource exploitation threaten traditional practices. However, there are positive steps toward recognizing indigenous 
-                            land rights, such as Australia’s acknowledgment of Aboriginal land ownership and New Zealand’s Waitangi Tribunal addressing Maaori claims. Efforts in Melanesia to codify customary land rights also reflect 
+                            land rights, such as Australia's acknowledgment of Aboriginal land ownership and New Zealand's Waitangi Tribunal addressing Maaori claims. Efforts in Melanesia to codify customary land rights also reflect 
                             growing respect for traditional governance and cultural preservation.
                         </p>
                     </div>
@@ -344,7 +346,7 @@
             </form>
         </div>
         
-    </div>
+    </main>
 
     <script src="oceania.js"></script>
     <script src="../home.js"></script>
