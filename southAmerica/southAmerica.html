@@ -109,6 +109,99 @@
 
         </section>
         
+        <section id="culture">
+            <h2>South America's Culture</h2>
+            <p>South America contains a rich and diverse culture set that stems from
+                pre-Colombian civilizations and indigenous tribes. Combined with influnce from 
+                the customs of African slaves and European and Asian immigrants, the continent is 
+                dense with diversity that is reflected through it's architecture, music, food, and religon.
+            </p>
+            <p>
+                Select a dropdown below to learn more about South America's Culture!
+            </p>
+            <div class="dropdown">
+                <div class="dropdown-header"><h4>Brazil</h4></div>
+                    <div class="dropdown-content">
+                        <p>
+                            A few of the most known cultural hubs in Brazil include the cities of Rio, Salvador, and
+                            Sao Paolo. Popular carnival processions take place in the cities of Rio and Salvador during
+                            the month of February and notable museaums and modern cultural initiatives can be found in Sao Paolo.
+                            Many visit Brazil for its colonial history including the district of Santa Teresa. This neighborhood was built 
+                            during the 1750's and was considered an upper class borough towards the end of the 19th and 20th centuries.
+                            Today Santa Teresa is home to several artists and art galleries, such as art collector Raymundo Ottoni de Castro Maia.
+                            His estatae the Chacara do Ceu mansion was turned into a museaum exhibit and houses popular artworks that many enjoy to visit and admire.
+                        </p>
+                        <img src="southAmericaCultureImages/SantaTeresa.jpeg" alt="Image of Santa Teresa" style="width:300px; height:auto;">
+                        <p>
+                            Brazil has a blend of influence that stems from Africa, Portugal, and Indigenous tribes and can be found in the city of Salvador de Bahia. The city houses candomble
+                            temples that coexist alongside catholic churches and streets that fill up with drumming, samba, and capoeira performances.  Capoeira is known as Afro-Brazilian "dance fighting"
+                            sequences made up of dance techniques, acrobatics, and musical elements combined together to create not only a form of self defense but also a form of maintaining spirituality and culture.
+                        </p>
+                        <p>For more authentic and traditional experience, the Pantanal, known as a region encompassing the world's largest tropical wetland area and flooded grasslands, can exhibit traditional gaucho culture
+                          and offer a slower-paced life in harmony with the land. Regions like Mato Grosso do Sul highlight the strong community ties and deep affinity locals have with their surroundings, 
+                          providing an immersive and contrasting experience to the bustling city life.  
+                        </p>
+                    </div>
+            </div>
+            
+            <div class="dropdown">
+                <div class="dropdown-header"><h4>Argentina</h4></div>
+                    <div class="dropdown-content">
+                        <p>
+                            Argentina's culture contains a rich blend of Spanish colonial and indigenous influences, cities
+                            including Mendoza, Cordoba, and Buenos Aires showcase the country's history through architecture.
+                            Cordoba and the Misiones Province holds famous Jesuit ruins that provide a glimpse into the region's historical missionary systems
+                            which were so effective that they led to the expulsion of the Jesuits by the Spanish.
+                        </p>
+                        <p>
+                            Argentina's indigenous heritage is particularly fascinating in regions like Tierra del Fuego, 
+                            where the Yamana people, a nomadic fishing tribe, thrived in harsh environments with minimal clothing. 
+                            Exploring their history reveals the resilience and unique lifestyle of these early inhabitants, making this area a cultural highlight for visitors.  
+                        </p>
+                        <img src="southAmericaCultureImages/brazil-culture.jpg" alt="Image of Culture in Brazil" style="width:300px; height:auto;">
+                        <p>
+                            In the northwest, around Salta, the influence of the Incan Empire from neighboring Peru is evident. This region boasts advanced agricultural systems and cultural artifacts, 
+                            providing insights into Incan ingenuity. A visit to Salta’s MAAM museum offers a closer look at this rich heritage, making it a must-see for those interested in 
+                            Argentina’s diverse cultural tapestry.
+                        </p>
+                    </div>
+            </div>
+    
+            <div class="dropdown">
+                <div class="dropdown-header"><h4>Chile</h4></div>
+                    <div class="dropdown-content">
+                        <p>
+                            Chile’s diverse geography, stretching from the southern tip of Tierra del Fuego to the northern deserts, 
+                            mirrors its rich and varied culture. Santiago, the capital, has grown into a cultural hub with theaters, museums, and vibrant 
+                            neighborhoods like Lastarria and Bellavista. Visitors can explore the city’s history at landmarks like Palacio La Moneda or dive into modern heritage at the Museum of Memory, 
+                            which reflects on Pinochet’s dictatorship. Santiago’s compact layout and efficient metro make it a convenient starting point for exploring the country.
+                        </p>
+                        <p>
+                            The southern Araucanía region is home to the Mapuche, Chile’s largest indigenous group. 
+                            Known for their 350-year resistance against Spanish colonization and later Chilean independence movements, the Mapuche have a deep connection to the stunning Lake District’s 
+                            lakes, rivers, and forests. Visiting this region offers not only breathtaking natural beauty but also insights into Mapuche traditions and their efforts to preserve their environment.
+                        </p>
+                        <p>
+                            Beyond the cities, rural areas in Chile are rich with cultural traditions and folk music. Strong ties to the land define the lives of these communities, 
+                            offering visitors a glimpse into a way of life deeply rooted in history and nature. From the growing cultural offerings of Santiago to the enduring legacy of the Mapuche, 
+                            Chile presents a multifaceted cultural experience.
+                        </p>
+                        <img src="southAmericaCultureImages/chileculture.jpg" alt="Image of Culture in Brazil" style="width:300px; height:auto;">
+                    </div>
+            </div>
+            <script>
+                document.querySelectorAll('.dropdown-header').forEach(header => {
+                    header.addEventListener('click', () => {
+                        header.classList.toggle('active');
+            
+                        const content = header.nextElementSibling;
+                        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                    });
+                });
+            </script>
+        </section>
+    
+    
 
         <div class="quizContainer">
             <form id="quizSA">
