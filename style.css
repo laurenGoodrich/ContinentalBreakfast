@@ -252,6 +252,13 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
+#homePage {
+    background-image: url('earth.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .welcome {
     display: flex;
     flex-direction: column;
@@ -345,7 +352,7 @@ footer ul {
 footer a {
     color: #fff;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 14px;
     margin: 5px;
 }
 
